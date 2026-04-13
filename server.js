@@ -7,8 +7,11 @@ const Stripe = require('stripe');
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
-const SITE_URL = process.env.SITE_URL;
-const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
+
+const SITE_URL = (process.env.SITE_URL || '').trim();
+const STRIPE_SECRET_KEY = (process.env.STRIPE_SECRET_KEY || '').trim();
+const STRIPE_PUBLISHABLE_KEY = (process.env.STRIPE_PUBLISHABLE_KEY || '').trim();
+
 const PUBLIC_DIR = __dirname;
 
 if (!SITE_URL) {
@@ -39,8 +42,8 @@ app.get(['/cancel', '/cancel.html'], (_req, res) => {
 
 app.get('/config', (_req, res) => {
   res.json({
-    stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY || '',
-    siteUrl: SITE_URL || ''
+    stripePublishableKey: STRIPE_PUBLISHABLE_KEY,
+    siteUrl: SITE_URL
   });
 });
 
@@ -86,9 +89,82 @@ app.post('/create-checkout-session', async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       payment_method_types: ['card'],
+      billing_address_collection: 'required',
+      phone_number_collection: {
+        enabled: true
+      },
+      shipping_address_collection: {
+  allowed_countries: [
+    // 🇬🇧 UK
+    'GB',
+
+    // 🌍 Europe
+    'FR','DE','IT','ES','NL','BE','IE','SE','NO','DK',
+
+    // 🌎 North America
+    'US','CA',
+
+    // 🌏 Others
+    'AE','SA','AU','NZ',
+
+    // 🌍 Africa (key markets)
+    'NG', // Nigeria
+    'GH', // Ghana
+    'ZA', // South Africa
+    'KE', // Kenya
+    'UG', // Uganda
+    'TZ', // Tanzania
+    'ZW', // Zimbabwe
+    'ZM', // Zambia
+    'BW', // Botswana
+    'CM', // Cameroon
+    'CI', // Ivory Coast
+    'SN', // Senegal
+    'RW', // Rwanda
+    'MA', // Morocco
+    'EG'  // Egypt
+  ]
+},
+      customer_creation: 'always',
       line_items,
+      shipping_options: [
+  // 🇬🇧 UK Shipping
+  {
+    shipping_rate_data: {
+      type: 'fixed_amount',
+      fixed_amount: {
+        amount: 500, // £5.00
+        currency: 'gbp'
+      },
+      display_name: 'UK Delivery',
+      delivery_estimate: {
+        minimum: { unit: 'business_day', value: 3 },
+        maximum: { unit: 'business_day', value: 7 }
+      }
+    }
+  },
+
+  // 🌍 International Shipping
+  {
+    shipping_rate_data: {
+      type: 'fixed_amount',
+      fixed_amount: {
+        amount: 2800, // £28.00
+        currency: 'gbp'
+      },
+      display_name: 'International Delivery',
+      delivery_estimate: {
+        minimum: { unit: 'business_day', value: 5 },
+        maximum: { unit: 'business_day', value: 10 }
+      }
+    }
+  }
+],
       success_url: `${SITE_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${SITE_URL}/cancel`
+      cancel_url: `${SITE_URL}/cancel`,
+      metadata: {
+        store: 'Caviar Curls'
+      }
     });
 
     res.json({ id: session.id });
