@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help & Support | Caviar Curls</title>
+  <meta name="description" content="Get help with shipping, returns, order updates, and customer support from Caviar Curls." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-announcement">Luxury Hair, Classy You</div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-main">Caviar Curls</span>
+        <span class="brand-sub">Pure glam. Luxe looks.</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html">Home</a>
+        <a href="wigs.html">Wigs</a>
+        <a href="bundles.html">Bundles</a>
+        <a href="index.html#experience">Book Online</a>
+        <a href="help.html">Help</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-toggle cart-bag" type="button" aria-label="Open cart">
+          👜
+          <span id="cartCount" class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="shop-hero small-hero support-hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-card reveal">
+        <p class="hero-kicker">Customer Care</p>
+        <h1>Help & Support</h1>
+        <p class="shop-subtext">Need help with your order, shipping, returns, or product advice? We’re here to help you quickly and elegantly.</p>
+      </div>
+    </section>
+
+    <section class="section support-strip reveal">
+      <div class="support-pill-grid">
+        <article class="support-pill">
+          <span>📦</span>
+          <strong>Order Updates</strong>
+          <p>Check delivery times, tracking, and dispatch questions.</p>
+        </article>
+        <article class="support-pill">
+          <span>↩️</span>
+          <strong>Returns Guidance</strong>
+          <p>Understand eligibility, damaged item help, and next steps.</p>
+        </article>
+        <article class="support-pill">
+          <span>💬</span>
+          <strong>Fast Support</strong>
+          <p>Email support with your order number for the quickest reply.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section support-layout reveal">
+      <div class="support-grid">
+        <div class="support-panel support-contact-card">
+          <p class="eyebrow">Contact Options</p>
+          <h2>We’re Here to Help</h2>
+          <div class="support-contact-list">
+            <a href="mailto:caviarcurls@gmail.com?subject=Customer%20Support%20Request" class="support-contact-item">
+              <span class="support-icon">✉️</span>
+              <div>
+                <strong>Email Support</strong>
+                <p>caviarcurls@gmail.com</p>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/caviarcurlss?igsh=MXBndWp2MWt1cmk5dQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="support-contact-item">
+              <span class="support-icon">📱</span>
+              <div>
+                <strong>Instagram</strong>
+                <p>DM us for quick pre-order help and product questions.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="support-note-box">
+            <strong>Best way to get help fast</strong>
+            <p>Include your order number, the item purchased, and a short description of the issue so we can help you faster.</p>
+          </div>
+        </div>
+
+        <div class="support-panel">
+          <p class="eyebrow">Send a Support Request</p>
+          <h2>Contact Customer Care</h2>
+          <form id="supportForm" class="support-form">
+            <div class="field-row">
+              <div class="field">
+                <label for="supportName">Full Name*</label>
+                <input id="supportName" type="text" required />
+              </div>
+              <div class="field">
+                <label for="supportEmail">Email*</label>
+                <input id="supportEmail" type="email" required />
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="supportOrder">Order Number</label>
+                <input id="supportOrder" type="text" placeholder="Optional" />
+              </div>
+              <div class="field">
+                <label for="supportIssue">Issue Type*</label>
+                <select id="supportIssue" required>
+                  <option value="">Select one</option>
+                  <option>Order update</option>
+                  <option>Shipping question</option>
+                  <option>Return or exchange</option>
+                  <option>Damaged item</option>
+                  <option>Product advice</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="supportMessage">How can we help?*</label>
+              <textarea id="supportMessage" rows="6" required placeholder="Please share your order details, item name, and what you need help with."></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark full-btn">Send Support Request</button>
+            <p id="supportFormMessage" class="form-message"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-head">
+        <p class="eyebrow">Quick Answers</p>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list support-panel faq-panel">
+        <button class="faq-item" type="button">
+          <span>How long does shipping take?</span>
+          <span class="faq-plus">+</span>
+        </button>
+        <div class="faq-answer"><p>UK delivery is typically charged at £5. International delivery is £28 with an estimated 5–10 working days after dispatch. Processing time can vary depending on the item.</p></div>
+
+        <button class="faq-item" type="button">
+          <span>Can I change my order after placing it?</span>
+          <span class="faq-plus">+</span>
+        </button>
+        <div class="faq-answer"><p>If your order has not yet been processed, contact support as soon as possible with your order number and requested change.</p></div>
+
+        <button class="faq-item" type="button">
+          <span>How do I request a return?</span>
+          <span class="faq-plus">+</span>
+        </button>
+        <div class="faq-answer"><p>Please review the returns policy first, then email support with your order number, item details, and the reason for your request.</p></div>
+
+        <button class="faq-item" type="button">
+          <span>What should I include in a support request?</span>
+          <span class="faq-plus">+</span>
+        </button>
+        <div class="faq-answer"><p>Include your name, order number if you have one, the item purchased, and a clear explanation of the issue. Photos help for damage-related questions.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3>Your Bag</h3>
+      <button id="closeCart" class="close-cart" type="button">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">Your bag is empty.</p>
+    </div>
+    <div class="cart-footer">
+      <p>Total: <strong id="cartTotal">£0.00</strong></p>
+      <button class="btn btn-dark full-btn" type="button" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="eyebrow">Stay Elegant</p>
+        <h2>Caviar Curls</h2>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://www.instagram.com/caviarcurlss?igsh=MXBndWp2MWt1cmk5dQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:caviarcurls@gmail.com">caviarcurls@gmail.com</a>
+        <a href="https://www.tiktok.com/@caviarcurls?_r=1&_t=ZN-9558ZCTI36M" target="_blank" rel="noopener noreferrer">TikTok</a>
+      </div>
+
+      <div class="footer-links footer-policies">
+        <a href="shipping.html">Shipping</a>
+        <a href="returns.html">Returns</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="help.html">Help</a>
+      </div>
+    </div>
+
+    <p class="copyright">© 2026 Caviar Curls. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="script.js"></script>
+</body>
+</html>

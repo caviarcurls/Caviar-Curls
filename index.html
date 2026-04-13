@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Caviar Curls</title>
+  <meta name="description" content="Luxury wigs and premium bundles from Caviar Curls. Shop elegant textures, polished installs, and refined hair artistry." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-announcement">Luxury Hair, Classy You</div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-main">Caviar Curls</span>
+        <span class="brand-sub">Pure glam. Luxe looks.</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html">Home</a>
+        <a href="wigs.html">Wigs</a>
+        <a href="bundles.html">Bundles</a>
+        <a href="#experience">Book Online</a>
+        <a href="help.html">Help</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-toggle cart-bag" type="button" aria-label="Open cart">
+          👜
+          <span id="cartCount" class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-card reveal">
+        <p class="hero-kicker">Luxury Hair, Classy You</p>
+        <h1>Artistry in Curls</h1>
+        <div class="hero-buttons">
+          <a href="wigs.html" class="btn btn-dark">Shop Wigs</a>
+          <a href="bundles.html" class="btn btn-light">Shop Bundles</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section collections reveal" id="collections">
+      <div class="section-head">
+        <p class="eyebrow">Luxury Hair Shop</p>
+        <h2>The Collections</h2>
+      </div>
+
+      <div class="collections-grid">
+        <article class="collection-card reveal">
+          <div class="collection-image product-image">
+            <img src="images/wig1.jpg" alt="Luxury body wave wig">
+          </div>
+          <div class="collection-content">
+            <h3>Signature Wigs</h3>
+            <p>Luxury body wave wigs crafted for elegance, movement, and a flawless finish.</p>
+            <a href="wigs.html" class="btn btn-dark">Shop Wigs</a>
+          </div>
+        </article>
+
+        <article class="collection-card reveal">
+          <div class="collection-image product-image">
+            <img src="images/bundles-rack-dark.jpg" alt="Luxury dark bundles">
+          </div>
+          <div class="collection-content">
+            <h3>Divine Bundles</h3>
+            <p>Premium straight, wave, and curly textures designed for custom installs.</p>
+            <a href="bundles.html" class="btn btn-dark">Shop Bundles</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section vision reveal">
+      <div class="vision-wrap">
+        <div class="vision-image"></div>
+        <div class="vision-copy">
+          <p class="eyebrow">The Vision Behind Caviar Curls</p>
+          <h2>The Vision Behind Caviar Curls</h2>
+          <p>
+            At Caviar Curls, we believe that true luxury is found in the details. Our journey began with a definitive vision: to provide women with hair that feels as elite as it looks. We are committed to premium quality, timeless beauty, and elegant styling that feels effortless.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section royal reveal">
+      <div class="royal-overlay"></div>
+      <div class="royal-panel">
+        <p class="eyebrow">New Arrivals - Luxury Bundles</p>
+        <h2>The Royal Collection</h2>
+        <p>Elevate your presence with our most elite bundles, meticulously crafted for the woman who demands elegance without compromise.</p>
+        <a href="bundles.html" class="btn btn-light">Shop the Collection</a>
+      </div>
+    </section>
+
+    <section class="section experience reveal" id="experience">
+      <div class="experience-wrap">
+        <p class="eyebrow">Unparalleled Quality - Chosen by the Elite - Luxury Hair</p>
+        <h2>Experience Caviar Curls</h2>
+        <p class="experience-intro">
+          Indulge in the pinnacle of hair artistry. Please share your details to begin your journey toward exquisite hair health.
+        </p>
+
+        <form class="signup-form" id="signupForm">
+          <div class="field-row">
+            <div class="field">
+              <label for="firstName">First Name*</label>
+              <input id="firstName" type="text" required />
+            </div>
+
+            <div class="field">
+              <label for="lastName">Last Name*</label>
+              <input id="lastName" type="text" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address*</label>
+            <input id="email" type="email" required />
+          </div>
+
+          <label class="checkbox-row">
+            <input type="checkbox" required />
+            <span>I wish to receive the Caviar Curls newsletter and exclusive invitations.*</span>
+          </label>
+
+          <button type="submit" class="btn btn-dark full-btn">Join the Elite</button>
+          <p id="formMessage" class="form-message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3>Your Bag</h3>
+      <button id="closeCart" class="close-cart" type="button">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">Your bag is empty.</p>
+    </div>
+    <div class="cart-footer">
+      <p>Total: <strong id="cartTotal">£0.00</strong></p>
+      <button class="btn btn-dark full-btn" type="button" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+
+  <footer class="site-footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="eyebrow">Stay Elegant</p>
+        <h2>Caviar Curls</h2>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://www.instagram.com/caviarcurlss?igsh=MXBndWp2MWt1cmk5dQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+          Instagram
+        </a>
+        <a href="mailto:caviarcurls@gmail.com">caviarcurls@gmail.com</a>
+        <a href="https://www.tiktok.com/@caviarcurls?_r=1&_t=ZN-9558ZCTI36M" target="_blank" rel="noopener noreferrer">
+          TikTok
+        </a>
+      </div>
+
+      <div class="footer-links footer-policies">
+        <a href="shipping.html">Shipping</a>
+        <a href="returns.html">Returns</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="help.html">Help</a>
+      </div>
+    </div>
+
+    <p class="copyright">© 2026 Caviar Curls. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="script.js"></script>
+</body>
+</html>
