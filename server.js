@@ -133,7 +133,7 @@ app.post('/create-checkout-session', async (req, res) => {
     shipping_rate_data: {
       type: 'fixed_amount',
       fixed_amount: {
-        amount: 500, // £5.00
+        amount: 600, // £6.00
         currency: 'gbp'
       },
       display_name: 'UK Delivery',
