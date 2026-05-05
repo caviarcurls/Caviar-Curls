@@ -1244,3 +1244,64 @@ a {
     grid-template-columns: 1fr;
   }
 }
+/* MOBILE PRODUCT GRID - 2 PRODUCTS SIDE BY SIDE */
+@media (max-width: 760px) {
+  .shop-grid,
+  .collections-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+
+  .product-image img,
+  .product-main-image {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .collection-content {
+    padding: 14px;
+  }
+
+  .collection-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .collection-content p {
+    font-size: 0.85rem;
+  }
+
+  .price-tag {
+    font-size: 1.35rem;
+  }
+
+  .product-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .product-actions {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 11px 14px;
+    font-size: 0.85rem;
+  }
+
+  .product-gallery-thumbs {
+    gap: 6px;
+    padding: 10px 10px 0;
+  }
+
+  .gallery-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+  }
+}
