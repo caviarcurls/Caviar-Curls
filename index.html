@@ -20,11 +20,15 @@
   padding:0;
   box-sizing:border-box;
 }
-<script src="app.js"></script>
+
 body{
   font-family:'Inter',sans-serif;
   background:#fff;
   color:#111;
+}
+
+a{
+  text-decoration:none;
 }
 
 /* TOP BAR */
@@ -56,7 +60,6 @@ body{
 }
 
 .brand{
-  text-decoration:none;
   color:#111;
 }
 
@@ -78,7 +81,44 @@ body{
 .shop-icons{
   display:flex;
   gap:14px;
+  align-items:center;
+}
+
+.shop-icons button{
+  background:none;
+  border:none;
   font-size:18px;
+}
+
+.shop-icons a{
+  color:#111;
+  font-size:18px;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu{
+  position:fixed;
+  top:70px;
+  left:-100%;
+  width:260px;
+  height:100vh;
+  background:white;
+  z-index:999;
+  padding:30px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  transition:0.4s ease;
+}
+
+.mobile-menu.active{
+  left:0;
+}
+
+.mobile-menu a{
+  color:#111;
+  font-size:16px;
 }
 
 /* HERO */
@@ -154,11 +194,9 @@ body{
   border-radius:999px;
   background:white;
   color:#111;
-  text-decoration:none;
   font-size:10px;
   letter-spacing:2px;
   text-transform:uppercase;
-  transition:0.3s ease;
 }
 
 .hero-btn-outline{
@@ -188,7 +226,6 @@ body{
 }
 
 .products-header a{
-  text-decoration:none;
   color:#111;
   font-size:11px;
   letter-spacing:2px;
@@ -202,7 +239,6 @@ body{
 }
 
 .product-card{
-  text-decoration:none;
   color:#111;
 }
 
@@ -299,7 +335,6 @@ footer{
 }
 
 .footer-links a{
-  text-decoration:none;
   color:rgba(255,255,255,0.75);
   font-size:14px;
 }
@@ -311,92 +346,6 @@ footer{
   border-top:1px solid rgba(255,255,255,0.1);
   color:rgba(255,255,255,0.5);
   font-size:12px;
-}
-
-/* DESKTOP */
-
-@media(min-width:769px){
-
-  .shop-header-inner{
-    max-width:1400px;
-    margin:auto;
-    padding:18px 24px;
-  }
-
-  .brand-main{
-    font-size:36px;
-  }
-
-  .brand-sub{
-    font-size:11px;
-  }
-
-  .hero{
-    min-height:92vh;
-    padding:40px;
-    align-items:center;
-  }
-
-  .hero h1{
-    font-size:7rem;
-  }
-
-  .hero-text{
-    font-size:16px;
-    max-width:520px;
-  }
-
-  .hero-btn{
-    padding:16px 30px;
-    font-size:12px;
-  }
-
-  .homepage-products{
-    padding:90px 20px;
-  }
-
-  .products-header{
-    max-width:1400px;
-    margin:auto;
-    margin-bottom:40px;
-  }
-
-  .products-header h2{
-    font-size:52px;
-  }
-
-  .product-grid{
-    max-width:1400px;
-    margin:auto;
-    grid-template-columns:repeat(4,1fr);
-    gap:24px;
-  }
-
-  .product-card img{
-    height:420px;
-  }
-
-  .product-info h3{
-    font-size:18px;
-  }
-
-  .benefits{
-    padding:90px 20px;
-  }
-
-  .benefits-grid{
-    max-width:1200px;
-    margin:auto;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-  }
-
-  .footer-grid{
-    max-width:1300px;
-    margin:auto;
-    grid-template-columns:repeat(3,1fr);
-  }
-
 }
 
 </style>
@@ -426,13 +375,44 @@ footer{
     </a>
 
     <div class="shop-icons">
-      <span>☰</span>
-      <span>👜</span>
+
+      <button class="menu-toggle">
+        ☰
+      </button>
+
+      <a href="cart.html">
+        👜
+      </a>
+
     </div>
 
   </div>
 
 </header>
+
+<div class="mobile-menu">
+
+  <a href="index.html">
+    Home
+  </a>
+
+  <a href="wigs.html">
+    Wigs
+  </a>
+
+  <a href="bundles.html">
+    Bundles
+  </a>
+
+  <a href="frontals.html">
+    Frontals
+  </a>
+
+  <a href="cart.html">
+    Cart
+  </a>
+
+</div>
 
 <section class="hero">
 
@@ -491,57 +471,29 @@ footer{
 
   <div class="product-grid">
 
-    <a href="product1.html" class="product-card">
+    <a href="straight.html" class="product-card">
 
-      <img src="images/wig1.jpg" alt="Body Wave Wig">
+      <img src="images/Straight Cambodian Virgin hair.jpg">
 
       <div class="product-info">
 
-        <h3>HD Body Wave Wig</h3>
+        <h3>Straight Cambodian Wig</h3>
 
-        <p>£249</p>
+        <p>From £100</p>
 
       </div>
 
     </a>
 
-    <a href="product2.html" class="product-card">
+    <a href="straight.html" class="product-card">
 
-      <img src="images/home.jpg" alt="Straight Wig">
-
-      <div class="product-info">
-
-        <h3>Straight HD Wig</h3>
-
-        <p>£279</p>
-
-      </div>
-
-    </a>
-
-    <a href="product3.html" class="product-card">
-
-      <img src="images/Straight Cambodian Virgin hair.jpg" alt="Luxury Wig">
+      <img src="images/Body wave Cambodian virgin hair.jpg">
 
       <div class="product-info">
 
-        <h3>Luxury Straight Wig</h3>
+        <h3>Body Wave Wig</h3>
 
-        <p>£265</p>
-
-      </div>
-
-    </a>
-
-    <a href="product4.html" class="product-card">
-
-      <img src="images/Body wave Cambodian virgin hair.jpg" alt="Deep Wave Wig">
-
-      <div class="product-info">
-
-        <h3>Deep Wave Wig</h3>
-
-        <p>£295</p>
+        <p>From £120</p>
 
       </div>
 
@@ -661,6 +613,8 @@ footer{
   </div>
 
 </footer>
+
+<script src="app.js"></script>
 
 </body>
 </html>
