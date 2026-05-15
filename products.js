@@ -184,11 +184,11 @@ prices: {
 }
 },
 
-ssdbrown: {
-title: "SSD Brown Wig",
+ssdbrownbodywave: {
+title: "SSD Brown Body Wave Wig",
 type: "Luxury Colored Wig",
 image: "images/wig2.jpg",
-description: "Luxury SSD brown wig with soft premium finish.",
+description: "Luxury SSD brown body wave wig with premium softness.",
 prices: {
 "16": 190,
 "18": 205,
@@ -201,11 +201,11 @@ prices: {
 }
 },
 
-ssdbalayage: {
-title: "SSD Balayage Wig",
+ssdbalayagebodywave: {
+title: "SSD Balayage Body Wave Wig",
 type: "Luxury Colored Wig",
 image: "images/home.jpg",
-description: "Luxury balayage wig with premium blended tones.",
+description: "Luxury SSD balayage body wave wig with premium blend.",
 prices: {
 "16": 210,
 "18": 225,
@@ -303,6 +303,8 @@ product.image;
 
 const lengthSelect =
 document.getElementById("length-select");
+
+lengthSelect.innerHTML = "";
 
 Object.keys(product.prices).forEach(length => {
 
