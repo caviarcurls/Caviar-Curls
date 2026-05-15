@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cart | Caviar Curls</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.cart-page{
+  padding:30px 16px 80px;
+}
+
+.cart-title{
+  font-size:42px;
+  font-family:'Cormorant Garamond',serif;
+  margin-bottom:30px;
+}
+
+.cart-layout{
+  display:grid;
+  gap:20px;
+}
+
+.cart-item{
+  background:white;
+  border-radius:20px;
+  padding:14px;
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+
+.cart-item img{
+  width:95px;
+  height:115px;
+  object-fit:cover;
+  border-radius:14px;
+}
+
+.cart-info{
+  flex:1;
+}
+
+.cart-info h3{
+  font-size:16px;
+  margin-bottom:6px;
+}
+
+.cart-info p{
+  font-size:13px;
+  color:#777;
+  margin-bottom:10px;
+}
+
+.cart-price{
+  font-size:16px;
+  color:#7b5d47;
+  font-weight:600;
+}
+
+.remove-btn{
+  margin-top:10px;
+  background:none;
+  color:#999;
+  font-size:12px;
+}
+
+.cart-summary{
+  background:white;
+  border-radius:20px;
+  padding:22px;
+}
+
+.summary-row{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:16px;
+  font-size:14px;
+}
+
+.summary-total{
+  font-size:22px;
+  font-weight:700;
+}
+
+.checkout-btn{
+  width:100%;
+  padding:16px;
+  border-radius:999px;
+  background:#111;
+  color:white;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:11px;
+  margin-top:20px;
+}
+
+@media(min-width:769px){
+
+  .cart-page{
+    max-width:1400px;
+    margin:auto;
+    padding:50px 20px 100px;
+  }
+
+  .cart-layout{
+    grid-template-columns:1fr 420px;
+    align-items:start;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="shop-header">
+
+  <div class="shop-header-inner">
+
+    <a href="index.html" class="brand">
+
+      <span class="brand-main">
+        Caviar Curls
+      </span>
+
+      <span class="brand-sub">
+        PREMIUM LUXURY HAIR
+      </span>
+
+    </a>
+
+    <div class="shop-icons">
+      <span>☰</span>
+      <span>👜</span>
+    </div>
+
+  </div>
+
+</header>
+
+<section class="cart-page">
+
+  <h1 class="cart-title">
+    Your Cart
+  </h1>
+
+  <div class="cart-layout">
+
+    <div>
+
+      <div class="cart-item">
+
+        <img src="images/Straight Cambodian Virgin hair.jpg">
+
+        <div class="cart-info">
+
+          <h3>
+            Straight Cambodian Wig
+          </h3>
+
+          <p>
+            22 Inches • HD Lace • 180% Density
+          </p>
+
+          <div class="cart-price">
+            £220
+          </div>
+
+          <button class="remove-btn">
+            Remove
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="cart-summary">
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span>£220</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span>FREE</span>
+      </div>
+
+      <div class="summary-row summary-total">
+        <span>Total</span>
+        <span>£220</span>
+      </div>
+
+      <a href="checkout.html">
+        <button class="checkout-btn">
+          Secure Checkout
+        </button>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>
