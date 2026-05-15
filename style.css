@@ -315,6 +315,38 @@ button{
   border-radius:14px;
 }
 
+/* BENEFITS */
+
+.benefits{
+  background:#f8f5f2;
+  padding:60px 16px;
+}
+
+.benefits-grid{
+  display:grid;
+  gap:18px;
+}
+
+.benefit-box{
+  background:white;
+  border-radius:20px;
+  padding:28px 20px;
+  text-align:center;
+}
+
+.benefit-box h3{
+  font-size:24px;
+  font-family:'Cormorant Garamond',serif;
+  margin-bottom:12px;
+  color:#111;
+}
+
+.benefit-box p{
+  color:#666;
+  line-height:1.7;
+  font-size:14px;
+}
+
 /* REVIEWS */
 
 .review-section{
@@ -357,6 +389,62 @@ button{
 
 .review-card span{
   color:#777;
+}
+
+/* FOOTER */
+
+footer{
+  background:#111;
+  color:white;
+  padding:60px 20px 30px;
+  margin-top:60px;
+}
+
+.footer-grid{
+  display:grid;
+  gap:40px;
+}
+
+.footer-logo{
+  font-size:42px;
+  font-family:'Cormorant Garamond',serif;
+  margin-bottom:12px;
+  color:white;
+}
+
+.footer-text{
+  color:rgba(255,255,255,0.7);
+  line-height:1.7;
+  font-size:14px;
+}
+
+.footer-title{
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+  color:#f1c48c;
+}
+
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.footer-links a{
+  text-decoration:none;
+  color:rgba(255,255,255,0.75);
+  font-size:14px;
+}
+
+.copyright{
+  text-align:center;
+  margin-top:50px;
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  color:rgba(255,255,255,0.5);
+  font-size:12px;
 }
 
 /* DESKTOP */
@@ -422,68 +510,20 @@ button{
     height:760px;
   }
 
+  .benefits{
+    padding:90px 20px;
+  }
+
+  .benefits-grid{
+    max-width:1200px;
+    margin:auto;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+  }
+
   .review-grid{
     grid-template-columns:repeat(3,1fr);
   }
-
-}
-/* FOOTER */
-
-footer{
-  background:#111;
-  color:white;
-  padding:60px 20px 30px;
-  margin-top:60px;
-}
-
-.footer-grid{
-  display:grid;
-  gap:40px;
-}
-
-.footer-logo{
-  font-size:42px;
-  font-family:'Cormorant Garamond',serif;
-  margin-bottom:12px;
-  color:white;
-}
-
-.footer-text{
-  color:rgba(255,255,255,0.7);
-  line-height:1.7;
-  font-size:14px;
-}
-
-.footer-title{
-  font-size:11px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  margin-bottom:18px;
-  color:#f1c48c;
-}
-
-.footer-links{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.footer-links a{
-  text-decoration:none;
-  color:rgba(255,255,255,0.75);
-  font-size:14px;
-}
-
-.copyright{
-  text-align:center;
-  margin-top:50px;
-  padding-top:24px;
-  border-top:1px solid rgba(255,255,255,0.1);
-  color:rgba(255,255,255,0.5);
-  font-size:12px;
-}
-
-@media(min-width:769px){
 
   .footer-grid{
     max-width:1300px;
