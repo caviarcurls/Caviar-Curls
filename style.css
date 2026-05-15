@@ -5,15 +5,12 @@
   --cream: #f7f2ec;
   --white: #ffffff;
 
-  --deep: #2b1813;
+  --deep: #241511;
   --brown: #4b2e25;
   --gold: #d7a56d;
 
-  --text: #3b2a24;
+  --text: #2e1f1b;
   --soft: #8f7a70;
-
-  --shadow:
-    0 20px 60px rgba(0,0,0,0.08);
 
 }
 
@@ -31,13 +28,11 @@ body {
 
   font-family: "Inter", sans-serif;
 
-  background: var(--cream);
+  background: #f5f1ec;
 
   color: var(--text);
 
   overflow-x: hidden;
-
-  line-height: 1.6;
 }
 
 img {
@@ -57,54 +52,46 @@ button {
 
 .top-announcement {
 
-  background: var(--deep);
+  background: #1c110d;
 
-  color: #fff;
+  color: white;
 
   text-align: center;
 
-  padding: 12px;
+  padding: 10px;
 
-  font-size: 0.8rem;
+  font-size: 0.72rem;
 
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
 
   text-transform: uppercase;
 }
 
 .site-header {
 
-  position: fixed;
+  position: sticky;
 
   top: 0;
 
-  left: 0;
-
-  width: 100%;
-
   z-index: 1000;
 
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.96);
 
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(18px);
 
   border-bottom:
-    1px solid rgba(0,0,0,0.04);
+    1px solid rgba(0,0,0,0.05);
 }
 
 .header-inner {
-
-  max-width: 1300px;
-
-  margin: auto;
-
-  padding: 18px 24px;
 
   display: flex;
 
   align-items: center;
 
   justify-content: space-between;
+
+  padding: 18px 18px;
 }
 
 .brand {
@@ -118,61 +105,50 @@ button {
     "Cormorant Garamond",
     serif;
 
-  font-size: 2rem;
-
-  color: var(--brown);
+  font-size: 2.2rem;
 
   font-weight: 700;
+
+  color: var(--brown);
 }
 
 .brand-sub {
 
-  font-size: 0.78rem;
-
   color: var(--soft);
+
+  font-size: 0.72rem;
+
+  margin-top: 2px;
 
   letter-spacing: 0.08em;
 }
 
 .site-nav {
-
-  display: flex;
-
-  gap: 32px;
-}
-
-.site-nav a {
-
-  color: var(--text);
-
-  font-size: 0.95rem;
-
-  font-weight: 500;
-
-  transition: 0.3s ease;
-}
-
-.site-nav a:hover {
-  color: var(--gold);
+  display: none;
 }
 
 .menu-toggle {
-  display: none;
+
+  background: transparent;
+
+  color: var(--brown);
+
+  font-size: 2rem;
 }
 
 .cart-bag {
 
-  background: rgba(75,46,37,0.08);
-
-  width: 56px;
-
-  height: 56px;
+  width: 58px;
+  height: 58px;
 
   border-radius: 50%;
 
+  background:
+    rgba(75,46,37,0.08);
+
   position: relative;
 
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .cart-count {
@@ -197,20 +173,20 @@ button {
 
   justify-content: center;
 
-  font-size: 0.7rem;
+  font-size: 0.72rem;
 }
 
 .hero {
 
   position: relative;
 
-  min-height: 100vh;
+  min-height: 72vh;
 
   display: flex;
 
-  align-items: center;
+  align-items: flex-end;
 
-  padding: 140px 24px 100px;
+  padding: 120px 18px 40px;
 
   background:
     url(images/home.jpg)
@@ -225,9 +201,9 @@ button {
 
   background:
     linear-gradient(
-      to right,
-      rgba(20,10,8,0.85),
-      rgba(20,10,8,0.28)
+      to top,
+      rgba(10,5,4,0.88),
+      rgba(10,5,4,0.18)
     );
 }
 
@@ -237,22 +213,16 @@ button {
 
   z-index: 2;
 
-  max-width: 620px;
+  width: 100%;
 
-  padding: 70px 50px;
+  padding: 28px;
 
-  border-radius: 32px;
+  border-radius: 26px;
 
   background:
-    rgba(15,10,8,0.35);
+    rgba(20,10,8,0.40);
 
-  backdrop-filter: blur(12px);
-
-  border:
-    1px solid rgba(255,255,255,0.08);
-
-  box-shadow:
-    0 25px 70px rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
 }
 
 .hero-kicker {
@@ -261,11 +231,11 @@ button {
 
   text-transform: uppercase;
 
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
 
-  font-size: 0.8rem;
+  font-size: 0.72rem;
 
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .hero h1 {
@@ -274,14 +244,13 @@ button {
     "Cormorant Garamond",
     serif;
 
-  font-size:
-    clamp(4rem, 8vw, 6.5rem);
+  font-size: 4rem;
 
-  line-height: 0.92;
+  line-height: 0.95;
 
   color: white;
 
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .hero h1 span {
@@ -298,39 +267,41 @@ button {
   color:
     rgba(255,255,255,0.82);
 
-  font-size: 1.05rem;
+  line-height: 1.7;
 
-  line-height: 1.8;
+  font-size: 0.95rem;
 
-  max-width: 520px;
+  margin-bottom: 26px;
 }
 
 .hero-buttons {
 
   display: flex;
 
-  gap: 16px;
+  flex-direction: column;
 
-  margin-top: 32px;
+  gap: 12px;
 }
 
 .btn {
 
-  display: inline-flex;
+  display: flex;
 
   align-items: center;
 
   justify-content: center;
 
-  padding: 16px 28px;
+  width: 100%;
+
+  padding: 15px;
 
   border-radius: 999px;
 
-  font-size: 0.82rem;
+  text-transform: uppercase;
 
   letter-spacing: 0.12em;
 
-  text-transform: uppercase;
+  font-size: 0.76rem;
 
   transition: 0.3s ease;
 }
@@ -340,19 +311,11 @@ button {
   background:
     linear-gradient(
       135deg,
-      #4b2e25,
-      #2a1915
+      #5a3428,
+      #241511
     );
 
   color: white;
-}
-
-.btn-dark:hover {
-
-  transform:
-    translateY(-2px);
-
-  background: #1d120d;
 }
 
 .btn-light {
@@ -363,36 +326,30 @@ button {
   color: white;
 
   border:
-    1px solid rgba(255,255,255,0.12);
+    1px solid rgba(255,255,255,0.14);
 }
 
 .section {
 
-  padding: 110px 24px;
+  padding: 32px 18px;
 }
 
 .section-head {
 
-  display: flex;
-
-  align-items: end;
-
-  justify-content: space-between;
-
-  margin-bottom: 50px;
+  margin-bottom: 24px;
 }
 
 .eyebrow {
 
   color: var(--gold);
 
+  letter-spacing: 0.18em;
+
   text-transform: uppercase;
 
-  letter-spacing: 0.2em;
+  font-size: 0.72rem;
 
-  font-size: 0.78rem;
-
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .section-head h2 {
@@ -401,42 +358,40 @@ button {
     "Cormorant Garamond",
     serif;
 
-  font-size:
-    clamp(2.8rem, 5vw, 4.5rem);
+  font-size: 3rem;
+
+  line-height: 0.95;
 
   color: var(--deep);
-
-  line-height: 1;
 }
 
 .collections-grid {
 
   display: grid;
 
-  grid-template-columns:
-    repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
-  gap: 30px;
+  gap: 14px;
 }
 
 .collection-card {
 
-  background:
-    rgba(255,255,255,0.9);
+  background: white;
 
-  border-radius: 32px;
+  border-radius: 20px;
 
   overflow: hidden;
 
-  box-shadow: var(--shadow);
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.05);
 
-  transition: 0.4s ease;
+  transition: 0.3s ease;
 }
 
 .collection-card:hover {
 
   transform:
-    translateY(-10px);
+    translateY(-4px);
 }
 
 .product-image {
@@ -448,44 +403,44 @@ button {
 
 .product-image img {
 
-  height: 500px;
+  height: 230px;
 
   object-fit: cover;
 
-  transition: 0.7s ease;
+  transition: 0.5s ease;
 }
 
 .product-card:hover
 .product-image img {
 
-  transform: scale(1.08);
+  transform: scale(1.04);
 }
 
 .product-badge {
 
   position: absolute;
 
-  top: 16px;
-  left: 16px;
+  top: 10px;
+  left: 10px;
 
-  z-index: 5;
+  z-index: 10;
 
-  background: var(--deep);
+  background: #2b1813;
 
   color: var(--gold);
 
-  padding: 8px 14px;
+  padding: 7px 12px;
 
   border-radius: 999px;
 
-  font-size: 0.7rem;
+  font-size: 0.58rem;
 
   letter-spacing: 0.12em;
 }
 
 .collection-content {
 
-  padding: 28px;
+  padding: 16px;
 }
 
 .collection-content h3 {
@@ -494,20 +449,24 @@ button {
     "Cormorant Garamond",
     serif;
 
-  font-size: 2rem;
+  font-size: 1.35rem;
+
+  line-height: 1.08;
+
+  margin-bottom: 12px;
 
   color: var(--deep);
-
-  margin-bottom: 14px;
 }
 
 .collection-content p {
 
+  font-size: 0.82rem;
+
+  line-height: 1.6;
+
   color: var(--soft);
 
-  margin-bottom: 22px;
-
-  line-height: 1.8;
+  margin-bottom: 16px;
 }
 
 .product-meta {
@@ -516,51 +475,69 @@ button {
 
   justify-content: space-between;
 
-  margin-bottom: 24px;
+  align-items: center;
+
+  margin-bottom: 16px;
 }
 
 .price-tag {
 
+  font-size: 1rem;
+
   font-weight: 700;
 
   color: var(--deep);
-
-  font-size: 1.1rem;
 }
 
 .product-type {
 
   color: var(--gold);
 
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .full-btn {
+
   width: 100%;
+
+  padding: 13px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5a3428,
+      #241511
+    );
+
+  color: white;
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
 }
 
 .site-footer {
 
-  background: var(--deep);
+  background: #1d120d;
 
   color: white;
 
-  padding: 80px 24px 40px;
+  padding: 60px 18px 30px;
+
+  margin-top: 60px;
 }
 
 .footer-inner {
 
-  max-width: 1200px;
-
-  margin: auto;
-
   display: flex;
 
-  justify-content: space-between;
+  flex-direction: column;
 
-  gap: 50px;
-
-  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .footer-brand h2 {
@@ -569,7 +546,7 @@ button {
     "Cormorant Garamond",
     serif;
 
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 
 .footer-links {
@@ -578,112 +555,104 @@ button {
 
   flex-direction: column;
 
-  gap: 14px;
+  gap: 12px;
 }
 
 .footer-links a {
 
-  color: rgba(255,255,255,0.75);
-
-  transition: 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: var(--gold);
+  color:
+    rgba(255,255,255,0.72);
 }
 
 .copyright {
 
+  margin-top: 40px;
+
   text-align: center;
 
-  margin-top: 60px;
-
   color:
-    rgba(255,255,255,0.45);
+    rgba(255,255,255,0.42);
 
-  font-size: 0.85rem;
+  font-size: 0.78rem;
 }
 
-.reveal {
+@media (min-width: 900px) {
 
-  opacity: 0;
+  .header-inner {
 
-  transform: translateY(40px);
+    max-width: 1300px;
 
-  animation:
-    fadeUp 1s ease forwards;
-}
+    margin: auto;
 
-@keyframes fadeUp {
-
-  to {
-
-    opacity: 1;
-
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 900px) {
-
-  .site-nav {
-    display: none;
+    padding: 20px 30px;
   }
 
   .menu-toggle {
+    display: none;
+  }
 
-    display: block;
+  .site-nav {
 
-    background: transparent;
+    display: flex;
 
-    font-size: 2rem;
+    gap: 34px;
+  }
 
-    color: var(--brown);
+  .site-nav a {
+
+    color: var(--text);
+
+    font-size: 0.92rem;
+
+    transition: 0.3s ease;
+  }
+
+  .site-nav a:hover {
+    color: var(--gold);
   }
 
   .hero {
 
-    min-height: 88vh;
+    min-height: 100vh;
 
-    padding: 120px 18px 80px;
+    align-items: center;
+
+    padding: 140px 40px 100px;
   }
 
   .hero-card {
 
-    padding: 42px 28px;
+    max-width: 650px;
+
+    padding: 70px 50px;
   }
 
   .hero h1 {
 
-    font-size: 4rem;
+    font-size:
+      clamp(5rem, 8vw, 7rem);
   }
 
   .hero-buttons {
 
-    flex-direction: column;
+    flex-direction: row;
+  }
+
+  .section {
+
+    padding: 90px 40px;
   }
 
   .collections-grid {
 
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      repeat(4, 1fr);
+
+    gap: 24px;
   }
 
   .product-image img {
 
-    height: 360px;
-  }
-
-  .section-head {
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 16px;
-  }
-
-  .footer-inner {
-
-    flex-direction: column;
+    height: 340px;
   }
 }
