@@ -80,9 +80,51 @@ button{
 
 .shop-icons{
   display:flex;
-  gap:14px;
-  font-size:18px;
+  align-items:center;
+  gap:18px;
   color:#111;
+}
+
+.shop-icons button{
+  background:none;
+  border:none;
+  font-size:22px;
+  color:#111;
+}
+
+.shop-icons a{
+  color:#111;
+  font-size:22px;
+  text-decoration:none;
+}
+
+/* LUXURY TOP NAV */
+
+.mobile-menu{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:26px;
+  padding:18px 12px;
+  background:rgba(248,246,243,0.98);
+  border-top:1px solid rgba(0,0,0,0.05);
+  border-bottom:1px solid rgba(0,0,0,0.05);
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+.mobile-menu::-webkit-scrollbar{
+  display:none;
+}
+
+.mobile-menu a{
+  color:#111;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  white-space:nowrap;
 }
 
 /* SHOP TOP */
@@ -100,10 +142,12 @@ button{
 }
 
 .shop-top h1{
-  font-size:34px;
+  font-size:3.8rem;
   font-family:'Cormorant Garamond',serif;
-  color:#111;
-  line-height:1;
+  color:#241511;
+  line-height:0.92;
+  letter-spacing:-1px;
+  font-weight:700;
 }
 
 /* PRODUCTS */
@@ -161,7 +205,6 @@ button{
   line-height:1.3;
   margin-bottom:6px;
   color:#111;
-  font-family:'Inter',sans-serif;
   font-weight:600;
 }
 
@@ -315,82 +358,6 @@ button{
   border-radius:14px;
 }
 
-/* BENEFITS */
-
-.benefits{
-  background:#f8f5f2;
-  padding:60px 16px;
-}
-
-.benefits-grid{
-  display:grid;
-  gap:18px;
-}
-
-.benefit-box{
-  background:white;
-  border-radius:20px;
-  padding:28px 20px;
-  text-align:center;
-}
-
-.benefit-box h3{
-  font-size:24px;
-  font-family:'Cormorant Garamond',serif;
-  margin-bottom:12px;
-  color:#111;
-}
-
-.benefit-box p{
-  color:#666;
-  line-height:1.7;
-  font-size:14px;
-}
-
-/* REVIEWS */
-
-.review-section{
-  padding:20px 16px 60px;
-}
-
-.section-head{
-  margin-bottom:20px;
-}
-
-.eyebrow{
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:3px;
-  font-size:10px;
-  margin-bottom:10px;
-}
-
-.section-head h2{
-  font-size:34px;
-  font-family:'Cormorant Garamond',serif;
-}
-
-.review-grid{
-  display:grid;
-  gap:14px;
-}
-
-.review-card{
-  background:white;
-  padding:20px;
-  border-radius:16px;
-}
-
-.review-card p{
-  line-height:1.7;
-  margin-bottom:10px;
-  font-size:14px;
-}
-
-.review-card span{
-  color:#777;
-}
-
 /* FOOTER */
 
 footer{
@@ -433,7 +400,6 @@ footer{
 }
 
 .footer-links a{
-  text-decoration:none;
   color:rgba(255,255,255,0.75);
   font-size:14px;
 }
@@ -445,143 +411,4 @@ footer{
   border-top:1px solid rgba(255,255,255,0.1);
   color:rgba(255,255,255,0.5);
   font-size:12px;
-}
-
-/* DESKTOP */
-
-@media(min-width:769px){
-
-  .shop-header-inner{
-    max-width:1400px;
-    margin:auto;
-    padding:18px 24px;
-  }
-
-  .brand-main{
-    font-size:36px;
-  }
-
-  .brand-sub{
-    font-size:11px;
-  }
-
-  .shop-grid-wrap{
-    padding:0 20px 80px;
-  }
-
-  .wow-grid{
-    max-width:1400px;
-    margin:auto;
-    grid-template-columns:repeat(4,1fr);
-    gap:24px;
-  }
-
-  .wow-image-wrap img{
-    height:420px;
-  }
-
-  .wow-content h3{
-    font-size:18px;
-  }
-
-  .price{
-    font-size:18px;
-  }
-
-  .shop-top{
-    max-width:1400px;
-    margin:auto;
-    padding:50px 20px 30px;
-  }
-
-  .shop-top h1{
-    font-size:52px;
-  }
-
-  .product-page{
-    max-width:1400px;
-    margin:auto;
-    grid-template-columns:1.1fr 0.9fr;
-    gap:40px;
-    padding:50px 20px 80px;
-  }
-
-  .main-product-image{
-    height:760px;
-  }
-
-  .benefits{
-    padding:90px 20px;
-  }
-
-  .benefits-grid{
-    max-width:1200px;
-    margin:auto;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-  }
-
-  .review-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .footer-grid{
-    max-width:1300px;
-    margin:auto;
-    grid-template-columns:repeat(3,1fr);
-  }
-
-}
-/* LUXURY TOP NAV */
-
-.mobile-menu{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:26px;
-  padding:18px 12px;
-  background:rgba(248,246,243,0.98);
-  border-top:1px solid rgba(0,0,0,0.05);
-  border-bottom:1px solid rgba(0,0,0,0.05);
-  overflow-x:auto;
-  -webkit-overflow-scrolling:touch;
-}
-
-.mobile-menu::-webkit-scrollbar{
-  display:none;
-}
-
-.mobile-menu a{
-  color:#111;
-  text-decoration:none;
-  font-size:13px;
-  font-weight:500;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  white-space:nowrap;
-  transition:0.3s ease;
-}
-
-.mobile-menu a:hover{
-  color:#7b5d47;
-}
-
-.shop-icons{
-  display:flex;
-  align-items:center;
-  gap:18px;
-  color:#111;
-}
-
-.shop-icons button{
-  background:none;
-  border:none;
-  font-size:22px;
-  color:#111;
-}
-
-.shop-icons a{
-  color:#111;
-  font-size:22px;
-  text-decoration:none;
 }
