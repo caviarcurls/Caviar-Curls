@@ -109,7 +109,7 @@
 </style>
 
 </head>
-<script src="app.js"></script>
+
 <body>
 
 <header class="shop-header">
@@ -129,13 +129,44 @@
     </a>
 
     <div class="shop-icons">
-      <span>☰</span>
-      <span>👜</span>
+
+      <button class="menu-toggle">
+        ☰
+      </button>
+
+      <a href="cart.html">
+        👜
+      </a>
+
     </div>
 
   </div>
 
 </header>
+
+<div class="mobile-menu">
+
+  <a href="index.html">
+    Home
+  </a>
+
+  <a href="wigs.html">
+    Wigs
+  </a>
+
+  <a href="bundles.html">
+    Bundles
+  </a>
+
+  <a href="frontals.html">
+    Frontals
+  </a>
+
+  <a href="cart.html">
+    Cart
+  </a>
+
+</div>
 
 <section class="checkout-page">
 
@@ -187,7 +218,7 @@
 
       <div class="summary-row">
         <span>Subtotal</span>
-        <span>£220</span>
+        <span class="subtotal-price">£0</span>
       </div>
 
       <div class="summary-row">
@@ -197,7 +228,7 @@
 
       <div class="summary-row summary-total">
         <span>Total</span>
-        <span>£220</span>
+        <span class="total-price">£0</span>
       </div>
 
       <a href="success.html">
@@ -211,6 +242,8 @@
   </div>
 
 </section>
+
+<script src="app.js"></script>
 
 </body>
 </html>
