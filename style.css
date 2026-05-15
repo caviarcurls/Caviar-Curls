@@ -1305,3 +1305,106 @@ a {
     border-radius: 8px;
   }
 }
+/* WOWANGEL STYLE MOBILE SHOP */
+
+@media (max-width: 760px) {
+
+  .shop-grid,
+  .collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: start;
+  }
+
+  .collection-card,
+  .product-card {
+    border-radius: 18px;
+    overflow: hidden;
+    background: #efe7df;
+    box-shadow: none;
+    border: 1px solid rgba(92, 71, 61, 0.08);
+  }
+
+  .product-image img,
+  .product-main-image,
+  .collection-image {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .collection-content {
+    padding: 12px;
+  }
+
+  .collection-content h3 {
+    font-size: 1.05rem;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .collection-content p {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .price-tag {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+  }
+
+  .product-type {
+    font-size: 0.72rem;
+    padding: 5px 10px;
+  }
+
+  .product-meta {
+    gap: 6px;
+    margin: 10px 0;
+  }
+
+  .product-options {
+    margin: 10px 0;
+  }
+
+  .product-options label {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+  }
+
+  .length-select {
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    border-radius: 10px;
+  }
+
+  .btn {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+    border-radius: 999px;
+    margin-top: 10px;
+  }
+
+  .product-actions {
+    gap: 6px;
+  }
+
+  .hero,
+  .shop-hero {
+    min-height: 40vh;
+  }
+
+  .hero-card {
+    padding: 24px 18px;
+  }
+
+  .brand-main {
+    font-size: 2.3rem;
+  }
+
+  .brand-sub {
+    font-size: 0.9rem;
+  }
+
+}
