@@ -3,741 +3,572 @@
 
 <head>
 
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
-/>
+<title>Caviar Curls | Luxury Hair</title>
 
-<title>
-  Caviar Curls | Luxury Hair
-</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  rel="preconnect"
-  href="https://fonts.googleapis.com"
->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link
-  rel="preconnect"
-  href="https://fonts.gstatic.com"
-  crossorigin
->
+<style>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap"
-  rel="stylesheet"
->
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-<link
-  rel="stylesheet"
-  href="style.css"
-/>
+body{
+  font-family:'Inter',sans-serif;
+  background:#fff;
+  color:#111;
+}
+
+/* TOP BAR */
+
+.top-bar{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:10px;
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+/* HEADER */
+
+.shop-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:white;
+  border-bottom:1px solid #eee;
+}
+
+.shop-header-inner{
+  max-width:1400px;
+  margin:auto;
+  padding:18px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand{
+  text-decoration:none;
+  color:#111;
+}
+
+.brand-main{
+  display:block;
+  font-size:36px;
+  font-family:'Cormorant Garamond',serif;
+  font-weight:700;
+}
+
+.brand-sub{
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#777;
+}
+
+.shop-icons{
+  display:flex;
+  gap:18px;
+  font-size:22px;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  min-height:92vh;
+  display:flex;
+  align-items:center;
+  padding:40px 20px;
+  overflow:hidden;
+}
+
+.hero img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.65)
+  );
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:620px;
+  color:white;
+}
+
+.hero-small{
+  font-size:12px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:#f1c48c;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:clamp(3.8rem,9vw,7rem);
+  line-height:0.88;
+  font-family:'Cormorant Garamond',serif;
+  margin-bottom:24px;
+}
+
+.hero-text{
+  line-height:1.8;
+  color:#f5f5f5;
+  margin-bottom:32px;
+  max-width:520px;
+}
+
+.hero-btn{
+  display:inline-block;
+  padding:16px 32px;
+  border-radius:999px;
+  background:white;
+  color:#111;
+  text-decoration:none;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  transition:0.3s ease;
+}
+
+.hero-btn:hover{
+  transform:translateY(-2px);
+}
+
+/* SHOP CATEGORIES */
+
+.shop-categories{
+  padding:90px 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:28px;
+  max-width:1400px;
+  margin:auto;
+}
+
+.category-card{
+  position:relative;
+  height:620px;
+  overflow:hidden;
+  border-radius:28px;
+  text-decoration:none;
+}
+
+.category-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:0.5s ease;
+}
+
+.category-card:hover img{
+  transform:scale(1.05);
+}
+
+.category-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.72),
+    rgba(0,0,0,0.12)
+  );
+}
+
+.category-content{
+  position:absolute;
+  bottom:35px;
+  left:28px;
+  z-index:2;
+  color:white;
+}
+
+.category-content p{
+  font-size:12px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#f1c48c;
+  margin-bottom:12px;
+}
+
+.category-content h2{
+  font-size:60px;
+  line-height:0.9;
+  font-family:'Cormorant Garamond',serif;
+  margin-bottom:18px;
+}
+
+.category-content span{
+  display:inline-block;
+  padding:14px 24px;
+  background:white;
+  color:#111;
+  border-radius:999px;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* BENEFITS */
+
+.benefits{
+  background:#f8f5f2;
+  padding:90px 20px;
+}
+
+.benefits-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.benefit-box{
+  background:white;
+  border-radius:24px;
+  padding:42px 28px;
+  text-align:center;
+}
+
+.benefit-box h3{
+  font-size:28px;
+  font-family:'Cormorant Garamond',serif;
+  margin-bottom:14px;
+}
+
+.benefit-box p{
+  color:#666;
+  line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+  background:#111;
+  color:white;
+  padding:80px 20px 40px;
+}
+
+.footer-grid{
+  max-width:1300px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:50px;
+}
+
+.footer-logo{
+  font-size:52px;
+  font-family:'Cormorant Garamond',serif;
+  margin-bottom:16px;
+}
+
+.footer-text{
+  color:rgba(255,255,255,0.7);
+  line-height:1.8;
+}
+
+.footer-title{
+  font-size:13px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+  color:#f1c48c;
+}
+
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.footer-links a{
+  text-decoration:none;
+  color:rgba(255,255,255,0.75);
+}
+
+.copyright{
+  text-align:center;
+  margin-top:70px;
+  padding-top:30px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  color:rgba(255,255,255,0.5);
+  font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .category-card{
+    height:500px;
+  }
+
+  .category-content h2{
+    font-size:48px;
+  }
+
+  .hero{
+    min-height:85vh;
+  }
+
+}
+
+</style>
 
 </head>
 
 <body>
 
+<div class="top-bar">
+  FREE UK SHIPPING ON ORDERS OVER £150
+</div>
+
 <header class="shop-header">
 
   <div class="shop-header-inner">
 
-    <a
-      href="index.html"
-      class="brand"
-    >
+    <a href="index.html" class="brand">
 
       <span class="brand-main">
         Caviar Curls
       </span>
 
       <span class="brand-sub">
-        Pure glam. Luxe looks.
+        Premium Luxury Hair
       </span>
 
     </a>
 
     <div class="shop-icons">
-
       <span>☰</span>
-
       <span>👜</span>
-
     </div>
 
   </div>
 
 </header>
 
+<section class="hero">
 
+  <img src="images/home.jpg" alt="Luxury Wig">
 
+  <div class="hero-overlay"></div>
 
+  <div class="hero-content">
 
-<section
-  style="
-  position:relative;
-  min-height:88vh;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  padding:40px 20px;
-  "
->
+    <p class="hero-small">
+      PREMIUM HD LACE WIGS
+    </p>
 
-<img
-  src="images/home.jpg"
-  alt="Luxury Wig"
-  style="
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  "
->
+    <h1>
+      Wigs That<br>
+      Look Like<br>
+      Your Hair.
+    </h1>
 
-<div
-  style="
-  position:absolute;
-  inset:0;
-  background:
-  linear-gradient(
-  to bottom,
-  rgba(0,0,0,0.2),
-  rgba(0,0,0,0.55)
-  );
-  "
-></div>
+    <p class="hero-text">
+      Flawless installs, luxury textures and premium quality wigs
+      designed for effortless beauty and confidence.
+    </p>
 
-<div
-  style="
-  position:relative;
-  z-index:2;
-  max-width:520px;
-  color:white;
-  "
->
+    <a href="wigs.html" class="hero-btn">
+      Shop Wigs
+    </a>
 
-<p
-  style="
-  letter-spacing:0.18em;
-  text-transform:uppercase;
-  color:#f1c48c;
-  margin-bottom:16px;
-  font-size:0.75rem;
-  "
->
-  Luxury Hair, Classy You
-</p>
-
-<h1
-  style="
-  font-family:'Cormorant Garamond',serif;
-  font-size:5rem;
-  line-height:0.9;
-  margin-bottom:20px;
-  "
->
-  Luxury Hair<br>
-  that Speaks<br>
-  Confidence.
-</h1>
-
-<p
-  style="
-  line-height:1.8;
-  color:#f5e9df;
-  margin-bottom:28px;
-  "
->
-  Premium quality wigs designed for flawless installs,
-  effortless glam and long-lasting beauty.
-</p>
-
-<div
-  style="
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  "
->
-
-<a
-  href="wigs.html"
-  style="
-  padding:16px 28px;
-  border-radius:999px;
-  background:linear-gradient(135deg,#5a3428,#241511);
-  color:white;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  font-size:0.72rem;
-  "
->
-  Shop The Collection
-</a>
-
-<a
-  href="bundles.html"
-  style="
-  padding:16px 28px;
-  border-radius:999px;
-  background:rgba(255,255,255,0.12);
-  border:1px solid rgba(255,255,255,0.3);
-  color:white;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  font-size:0.72rem;
-  backdrop-filter:blur(10px);
-  "
->
-  Luxury Bundles
-</a>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
+<section class="shop-categories">
 
+  <a href="wigs.html" class="category-card">
 
+    <img src="images/wig1.jpg" alt="Wigs">
 
+    <div class="category-overlay"></div>
 
+    <div class="category-content">
 
+      <p>Luxury Collection</p>
 
-<section
-style="
-padding:70px 18px;
-background:#f7f3ef;
-"
->
+      <h2>Wigs</h2>
 
-<div
-style="
-text-align:center;
-margin-bottom:40px;
-"
->
+      <span>Shop Now</span>
 
-<p
-style="
-color:#d6a670;
-letter-spacing:0.18em;
-text-transform:uppercase;
-font-size:0.72rem;
-margin-bottom:12px;
-"
->
-Shop Collections
-</p>
+    </div>
 
-<h2
-style="
-font-family:'Cormorant Garamond',serif;
-font-size:4rem;
-line-height:0.9;
-color:#241511;
-"
->
-Luxury Hair<br>
-Collections
-</h2>
+  </a>
 
-</div>
+  <a href="bundles.html" class="category-card">
 
-<div
-style="
-display:grid;
-grid-template-columns:1fr;
-gap:20px;
-"
->
+    <img src="images/Body wave Cambodian virgin hair.jpg" alt="Bundles">
 
-<a
-href='wigs.html'
-style='
-position:relative;
-height:500px;
-border-radius:28px;
-overflow:hidden;
-display:block;
-'
->
+    <div class="category-overlay"></div>
 
-<img
-src='images/Straight Cambodian Virgin hair.jpg'
-style='
-width:100%;
-height:100%;
-object-fit:cover;
-'
->
+    <div class="category-content">
 
-<div
-style='
-position:absolute;
-inset:0;
-background:
-linear-gradient(
-to top,
-rgba(0,0,0,0.6),
-rgba(0,0,0,0.1)
-);
-'
-></div>
+      <p>Premium Hair</p>
 
-<div
-style='
-position:absolute;
-bottom:30px;
-left:24px;
-color:white;
-'
->
+      <h2>Bundles</h2>
 
-<p
-style='
-letter-spacing:0.18em;
-text-transform:uppercase;
-font-size:0.7rem;
-margin-bottom:10px;
-color:#f1c48c;
-'
->
-Luxury Wigs
-</p>
+      <span>Shop Now</span>
 
-<h3
-style='
-font-family:"Cormorant Garamond",serif;
-font-size:3.5rem;
-line-height:0.9;
-margin-bottom:14px;
-'
->
-Shop Wigs
-</h3>
+    </div>
 
-<span
-style='
-padding:12px 20px;
-border-radius:999px;
-background:white;
-color:#241511;
-font-size:0.72rem;
-letter-spacing:0.12em;
-text-transform:uppercase;
-display:inline-block;
-'
->
-Explore Collection
-</span>
+  </a>
 
-</div>
+  <a href="frontals.html" class="category-card">
 
-</a>
+    <img src="images/Straight Cambodian Virgin hair.jpg" alt="Lace Frontals">
 
+    <div class="category-overlay"></div>
 
+    <div class="category-content">
 
+      <p>Flawless Installs</p>
 
+      <h2>Lace Frontals</h2>
 
+      <span>Shop Now</span>
 
-<a
-href='bundles.html'
-style='
-position:relative;
-height:500px;
-border-radius:28px;
-overflow:hidden;
-display:block;
-'
->
+    </div>
 
-<img
-src='images/Body wave Cambodian virgin hair.jpg'
-style='
-width:100%;
-height:100%;
-object-fit:cover;
-'
->
-
-<div
-style='
-position:absolute;
-inset:0;
-background:
-linear-gradient(
-to top,
-rgba(0,0,0,0.6),
-rgba(0,0,0,0.1)
-);
-'
-></div>
-
-<div
-style='
-position:absolute;
-bottom:30px;
-left:24px;
-color:white;
-'
->
-
-<p
-style='
-letter-spacing:0.18em;
-text-transform:uppercase;
-font-size:0.7rem;
-margin-bottom:10px;
-color:#f1c48c;
-'
->
-Luxury Bundles
-</p>
-
-<h3
-style='
-font-family:"Cormorant Garamond",serif;
-font-size:3.5rem;
-line-height:0.9;
-margin-bottom:14px;
-'
->
-Shop Bundles
-</h3>
-
-<span
-style='
-padding:12px 20px;
-border-radius:999px;
-background:white;
-color:#241511;
-font-size:0.72rem;
-letter-spacing:0.12em;
-text-transform:uppercase;
-display:inline-block;
-'
->
-Explore Collection
-</span>
-
-</div>
-
-</a>
-
-
-
-
-
-
-
-<a
-href='frontals.html'
-style='
-position:relative;
-height:500px;
-border-radius:28px;
-overflow:hidden;
-display:block;
-'
->
-
-<img
-src='images/wig1.jpg'
-style='
-width:100%;
-height:100%;
-object-fit:cover;
-'
->
-
-<div
-style='
-position:absolute;
-inset:0;
-background:
-linear-gradient(
-to top,
-rgba(0,0,0,0.6),
-rgba(0,0,0,0.1)
-);
-'
-></div>
-
-<div
-style='
-position:absolute;
-bottom:30px;
-left:24px;
-color:white;
-'
->
-
-<p
-style='
-letter-spacing:0.18em;
-text-transform:uppercase;
-font-size:0.7rem;
-margin-bottom:10px;
-color:#f1c48c;
-'
->
-Luxury Lace Frontals
-</p>
-
-<h3
-style='
-font-family:"Cormorant Garamond",serif;
-font-size:3.5rem;
-line-height:0.9;
-margin-bottom:14px;
-'
->
-Shop Lace<br>
-Frontals
-</h3>
-
-<span
-style='
-padding:12px 20px;
-border-radius:999px;
-background:white;
-color:#241511;
-font-size:0.72rem;
-letter-spacing:0.12em;
-text-transform:uppercase;
-display:inline-block;
-'
->
-Explore Collection
-</span>
-
-</div>
-
-</a>
-
-</div>
+  </a>
 
 </section>
 
+<section class="benefits">
 
+  <div class="benefits-grid">
 
+    <div class="benefit-box">
 
+      <h3>Premium Quality</h3>
 
+      <p>
+        100% luxury virgin hair with flawless HD lace and natural textures.
+      </p>
 
+    </div>
 
-<footer
-style="
-background:#1d120d;
-padding:70px 20px 40px;
-color:white;
-"
->
+    <div class="benefit-box">
 
-<div
-style="
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-"
->
+      <h3>Fast UK Shipping</h3>
 
-<div>
+      <p>
+        Secure and fast delivery across the UK with tracked shipping.
+      </p>
 
-<h3
-style="
-font-family:'Cormorant Garamond',serif;
-font-size:3rem;
-margin-bottom:16px;
-"
->
-Caviar Curls
-</h3>
+    </div>
 
-<p
-style="
-line-height:1.8;
-color:rgba(255,255,255,0.7);
-max-width:300px;
-"
->
-Luxury wigs, bundles and lace products crafted
-for flawless installs and premium beauty.
-</p>
+    <div class="benefit-box">
 
-</div>
+      <h3>Beginner Friendly</h3>
 
-<div>
+      <p>
+        Easy installs designed for effortless everyday glam and confidence.
+      </p>
 
-<h4
-style="
-margin-bottom:18px;
-font-size:1rem;
-letter-spacing:0.12em;
-text-transform:uppercase;
-color:#f1c48c;
-"
->
-Customer Care
-</h4>
+    </div>
 
-<div
-style="
-display:flex;
-flex-direction:column;
-gap:14px;
-"
->
+  </div>
 
-<a href="#" style="color:rgba(255,255,255,0.78);">
-Help Center
-</a>
+</section>
 
-<a href="#" style="color:rgba(255,255,255,0.78);">
-Shipping Information
-</a>
+<footer>
 
-<a href="#" style="color:rgba(255,255,255,0.78);">
-Returns & Exchanges
-</a>
+  <div class="footer-grid">
 
-<a href="#" style="color:rgba(255,255,255,0.78);">
-Track Your Order
-</a>
+    <div>
 
-<a href="#" style="color:rgba(255,255,255,0.78);">
-FAQ
-</a>
+      <h2 class="footer-logo">
+        Caviar Curls
+      </h2>
 
-</div>
+      <p class="footer-text">
+        Luxury wigs, bundles and lace products crafted
+        for flawless installs and premium beauty.
+      </p>
 
-</div>
+    </div>
 
-<div>
+    <div>
 
-<h4
-style="
-margin-bottom:18px;
-font-size:1rem;
-letter-spacing:0.12em;
-text-transform:uppercase;
-color:#f1c48c;
-"
->
-Follow Us
-</h4>
+      <h4 class="footer-title">
+        Shop
+      </h4>
 
-<div
-style="
-display:flex;
-flex-direction:column;
-gap:14px;
-"
->
+      <div class="footer-links">
 
-<a
-href="https://www.tiktok.com/@caviarcurls?_r=1&_t=ZN-96OAfjIMngM"
-target="_blank"
-style="
-color:rgba(255,255,255,0.78);
-"
->
-TikTok
-</a>
+        <a href="wigs.html">
+          Shop Wigs
+        </a>
 
-<a
-href="https://www.instagram.com/caviarcurlss?igsh=MXBndWp2MWt1cmk5dQ%3D%3D&utm_source=qr"
-target="_blank"
-style="
-color:rgba(255,255,255,0.78);
-"
->
-Instagram
-</a>
+        <a href="bundles.html">
+          Shop Bundles
+        </a>
 
-<a
-href="mailto:caviarcurls@gmail.com"
-style="
-color:rgba(255,255,255,0.78);
-"
->
-caviarcurls@gmail.com
-</a>
+        <a href="frontals.html">
+          Shop Lace Frontals
+        </a>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-<div>
+    <div>
 
-<h4
-style="
-margin-bottom:18px;
-font-size:1rem;
-letter-spacing:0.12em;
-text-transform:uppercase;
-color:#f1c48c;
-"
->
-Shop
-</h4>
+      <h4 class="footer-title">
+        Follow Us
+      </h4>
 
-<div
-style="
-display:flex;
-flex-direction:column;
-gap:14px;
-"
->
+      <div class="footer-links">
 
-<a
-href="wigs.html"
-style="
-color:rgba(255,255,255,0.78);
-"
->
-Shop Wigs
-</a>
+        <a href="https://instagram.com/caviarcurlss" target="_blank">
+          Instagram
+        </a>
 
-<a
-href="bundles.html"
-style="
-color:rgba(255,255,255,0.78);
-"
->
-Shop Bundles
-</a>
+        <a href="https://tiktok.com/@caviarcurls" target="_blank">
+          TikTok
+        </a>
 
-<a
-href="frontals.html"
-style="
-color:rgba(255,255,255,0.78);
-"
->
-Shop Lace Frontals
-</a>
+        <a href="mailto:caviarcurls@gmail.com">
+          caviarcurls@gmail.com
+        </a>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
-<div
-style="
-margin-top:60px;
-padding-top:24px;
-border-top:1px solid rgba(255,255,255,0.08);
-text-align:center;
-color:rgba(255,255,255,0.45);
-font-size:0.82rem;
-"
->
-© 2025 Caviar Curls. All Rights Reserved.
-</div>
+  <div class="copyright">
+    © 2025 Caviar Curls. All Rights Reserved.
+  </div>
 
 </footer>
 
