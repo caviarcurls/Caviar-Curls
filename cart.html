@@ -124,7 +124,7 @@
 </style>
 
 </head>
-<script src="app.js"></script>
+
 <body>
 
 <header class="shop-header">
@@ -144,13 +144,44 @@
     </a>
 
     <div class="shop-icons">
-      <span>☰</span>
-      <span>👜</span>
+
+      <button class="menu-toggle">
+        ☰
+      </button>
+
+      <a href="cart.html">
+        👜
+      </a>
+
     </div>
 
   </div>
 
 </header>
+
+<div class="mobile-menu">
+
+  <a href="index.html">
+    Home
+  </a>
+
+  <a href="wigs.html">
+    Wigs
+  </a>
+
+  <a href="bundles.html">
+    Bundles
+  </a>
+
+  <a href="frontals.html">
+    Frontals
+  </a>
+
+  <a href="cart.html">
+    Cart
+  </a>
+
+</div>
 
 <section class="cart-page">
 
@@ -160,33 +191,7 @@
 
   <div class="cart-layout">
 
-    <div>
-
-      <div class="cart-item">
-
-        <img src="images/Straight Cambodian Virgin hair.jpg">
-
-        <div class="cart-info">
-
-          <h3>
-            Straight Cambodian Wig
-          </h3>
-
-          <p>
-            22 Inches • HD Lace • 180% Density
-          </p>
-
-          <div class="cart-price">
-            £220
-          </div>
-
-          <button class="remove-btn">
-            Remove
-          </button>
-
-        </div>
-
-      </div>
+    <div class="cart-items">
 
     </div>
 
@@ -194,7 +199,7 @@
 
       <div class="summary-row">
         <span>Subtotal</span>
-        <span>£220</span>
+        <span class="subtotal-price">£0</span>
       </div>
 
       <div class="summary-row">
@@ -204,7 +209,7 @@
 
       <div class="summary-row summary-total">
         <span>Total</span>
-        <span>£220</span>
+        <span class="total-price">£0</span>
       </div>
 
       <a href="checkout.html">
@@ -218,6 +223,8 @@
   </div>
 
 </section>
+
+<script src="app.js"></script>
 
 </body>
 </html>
