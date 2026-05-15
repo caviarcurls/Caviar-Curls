@@ -1,205 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bundles | Caviar Curls</title>
-  <meta name="description" content="Shop premium straight and body wave hair bundles from Caviar Curls with elegant textures and luxury styling." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+
+<meta charset="UTF-8" />
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+/>
+
+<title>
+Luxury Bundles | Caviar Curls
+</title>
+
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com"
+>
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+rel="stylesheet"
+>
+
+<link
+rel="stylesheet"
+href="style.css"
+/>
+
 </head>
+
 <body>
-  <div class="top-announcement">Luxury Hair, Classy You</div>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="brand">
-        <span class="brand-main">Caviar Curls</span>
-        <span class="brand-sub">Pure glam. Luxe looks.</span>
-      </a>
+<header class="shop-header">
 
-      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+<div class="shop-header-inner">
 
-      <nav class="site-nav" id="siteNav">
-        <a href="index.html">Home</a>
-        <a href="wigs.html">Wigs</a>
-        <a href="bundles.html">Bundles</a>
-        <a href="index.html#experience">Book Online</a>
-        <a href="help.html">Help</a>
-      </nav>
+<a
+href="index.html"
+class="brand"
+>
 
-      <div class="header-actions">
-        <button class="cart-toggle cart-bag" type="button" aria-label="Open cart">
-          👜
-          <span id="cartCount" class="cart-count">0</span>
-        </button>
-      </div>
-    </div>
-  </header>
+<span class="brand-main">
+Caviar Curls
+</span>
 
-  <main>
-    <section class="shop-hero small-hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-card reveal">
-        <p class="hero-kicker">Luxury Bundle Collection</p>
-        <h1>Shop Bundles</h1>
-        <p class="shop-subtext">Straight and body wave bundles with dynamic pricing by hair type and inches.</p>
-      </div>
-    </section>
+<span class="brand-sub">
+Pure glam. Luxe looks.
+</span>
 
-    <section class="section collections reveal" id="collections">
-      <div class="section-head">
-        <p class="eyebrow">Luxury Hair Shop</p>
-        <h2>Bundle Collection</h2>
-      </div>
+</a>
 
-      <div class="shop-toolbar">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="straight">Straight</button>
-        <button class="filter-btn" data-filter="wave">Body Wave</button>
-      </div>
+<div class="shop-icons">
 
-      <div class="collections-grid shop-grid">
-        <article class="collection-card product-card reveal" data-category="straight">
-          <div class="collection-image product-image">
-            <img src="images/bundle-single.jpg" alt="Straight bundle">
-          </div>
-          <div class="collection-content">
-            <h3>Straight Bundle</h3>
-            <p>Silky straight bundles with pricing based on hair type and inches.</p>
+<span>☰</span>
 
-            <div class="product-meta">
-              <span class="price-tag dynamic-price" id="straightBundlePrice">£38</span>
-              <span class="product-type">Bundle</span>
-            </div>
+<span>👜</span>
 
-            <div class="product-options">
-              <label for="straightBundleHairType">Choose hair type:</label>
-              <select id="straightBundleHairType" class="length-select">
-                <option value="grade14A">Grade 14A</option>
-                <option value="rawHair">Raw Hair</option>
-              </select>
-            </div>
+</div>
 
-            <div class="product-options">
-              <label for="straightBundleLength">Choose inches:</label>
-              <select id="straightBundleLength" class="length-select"></select>
-            </div>
+</div>
 
-            <div class="product-actions">
-              <button class="btn btn-light" id="straightBundleQuickViewBtn" type="button">Quick View</button>
-              <button class="btn btn-dark" id="straightBundleAddToCartBtn" type="button">Add to Cart</button>
-            </div>
-          </div>
-        </article>
+</header>
 
-        <article class="collection-card product-card reveal" data-category="wave">
-          <div class="collection-image product-image">
-            <img src="images/bundle-bodywave.jpg" alt="Body wave bundle">
-          </div>
-          <div class="collection-content">
-            <h3>Body Wave Bundle</h3>
-            <p>Soft flowing body wave bundles with pricing based on hair type and inches.</p>
 
-            <div class="product-meta">
-              <span class="price-tag dynamic-price" id="bodyWaveBundlePrice">£38</span>
-              <span class="product-type">Bundle</span>
-            </div>
 
-            <div class="product-options">
-              <label for="bodyWaveBundleHairType">Choose hair type:</label>
-              <select id="bodyWaveBundleHairType" class="length-select">
-                <option value="grade14A">Grade 14A</option>
-                <option value="rawHair">Raw Hair</option>
-              </select>
-            </div>
 
-            <div class="product-options">
-              <label for="bodyWaveBundleLength">Choose inches:</label>
-              <select id="bodyWaveBundleLength" class="length-select"></select>
-            </div>
 
-            <div class="product-actions">
-              <button class="btn btn-light" id="bodyWaveBundleQuickViewBtn" type="button">Quick View</button>
-              <button class="btn btn-dark" id="bodyWaveBundleAddToCartBtn" type="button">Add to Cart</button>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
+<section
+style="
+padding:40px 18px 20px;
+"
+>
 
-  <div class="product-modal" id="productModal" aria-hidden="true">
-    <div class="product-modal-backdrop" id="productModalBackdrop"></div>
-    <div class="product-modal-card" role="dialog" aria-modal="true" aria-labelledby="modalName">
-      <button class="product-modal-close" id="productModalClose" aria-label="Close quick view">×</button>
-      <div class="product-modal-grid">
-        <div class="product-modal-visuals">
-          <button class="modal-nav modal-nav-prev" id="modalPrevImage" type="button" aria-label="Previous image">‹</button>
-          <div class="product-modal-image-wrap">
-            <img id="modalImage" src="" alt="Product preview">
-          </div>
-          <button class="modal-nav modal-nav-next" id="modalNextImage" type="button" aria-label="Next image">›</button>
-          <div class="product-modal-thumbs" id="modalThumbs"></div>
-        </div>
-        <div class="product-modal-content">
-          <p class="eyebrow">Luxury Quick View</p>
-          <h3 id="modalName">Product Name</h3>
-          <div class="modal-price" id="modalPrice">£0</div>
-          <p id="modalDesc">Product description.</p>
-          <div class="modal-highlights">
-            <span>Premium quality</span>
-            <span>Secure checkout</span>
-            <span>Fast dispatch</span>
-          </div>
-          <p class="modal-note" id="modalNote">Click the thumbnails to explore the product in more detail.</p>
-          <button class="btn btn-dark" id="modalAddToCart">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-  </div>
+<p class="shop-mini">
+Luxury Bundle Collection
+</p>
 
-  <aside class="cart-panel" id="cartPanel">
-    <div class="cart-header">
-      <h3>Your Bag</h3>
-      <button id="closeCart" class="close-cart" type="button">×</button>
-    </div>
-    <div class="cart-items" id="cartItems">
-      <p class="empty-cart">Your bag is empty.</p>
-    </div>
-    <div class="cart-footer">
-      <p>Total: <strong id="cartTotal">£0.00</strong></p>
-      <button class="btn btn-dark full-btn" type="button" id="checkoutBtn">Checkout</button>
-    </div>
-  </aside>
-  <div class="cart-backdrop" id="cartBackdrop"></div>
+<h1
+style="
+font-family:'Cormorant Garamond',serif;
+font-size:4rem;
+line-height:0.9;
+color:#241511;
+"
+>
+Raw Hair<br>
+Bundles
+</h1>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <p class="eyebrow">Stay Elegant</p>
-        <h2>Caviar Curls</h2>
-      </div>
-      <div class="footer-links">
-        <a href="https://www.instagram.com/caviarcurlss?igsh=MXBndWp2MWt1cmk5dQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="mailto:caviarcurls@gmail.com">caviarcurls@gmail.com</a>
-        <a href="https://www.tiktok.com/@caviarcurls?_r=1&_t=ZN-9558ZCTI36M" target="_blank" rel="noopener noreferrer">TikTok</a>
-      </div>
+</section>
 
-      <div class="footer-links footer-policies">
-        <a href="shipping.html">Shipping</a>
-        <a href="returns.html">Returns</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="help.html">Help</a>
-      </div>
-    </div>
-    <p class="copyright">© 2026 Caviar Curls. All Rights Reserved.</p>
-  </footer>
 
-  <script src="https://js.stripe.com/v3/"></script>
-  <script src="script.js"></script>
+
+
+
+
+<section class="shop-grid-wrap">
+
+<div class="wow-grid">
+
+
+
+
+<a
+href="straight.html"
+class="wow-card"
+>
+
+<div class="wow-image-wrap">
+
+<img
+src="images/Straight Cambodian Virgin hair.jpg"
+alt="Straight Bundles"
+>
+
+<div class="sale-badge">
+BEST SELLER
+</div>
+
+</div>
+
+<div class="wow-content">
+
+<h3>
+Straight Bundles
+</h3>
+
+<div class="stars">
+★★★★★ <span>(612)</span>
+</div>
+
+<div class="price-row">
+
+<span class="price">
+From £85
+</span>
+
+<span class="old-price">
+£160
+</span>
+
+</div>
+
+</div>
+
+</a>
+
+
+
+
+
+
+
+
+<a
+href="straight.html"
+class="wow-card"
+>
+
+<div class="wow-image-wrap">
+
+<img
+src="images/Body wave Cambodian virgin hair.jpg"
+alt="Body Wave Bundles"
+>
+
+<div class="sale-badge">
+HOT
+</div>
+
+</div>
+
+<div class="wow-content">
+
+<h3>
+Body Wave Bundles
+</h3>
+
+<div class="stars">
+★★★★★ <span>(421)</span>
+</div>
+
+<div class="price-row">
+
+<span class="price">
+From £90
+</span>
+
+<span class="old-price">
+£170
+</span>
+
+</div>
+
+</div>
+
+</a>
+
+
+
+
+
+
+
+
+<a
+href="straight.html"
+class="wow-card"
+>
+
+<div class="wow-image-wrap">
+
+<img
+src="images/wig1.jpg"
+alt="Deep Wave Bundles"
+>
+
+<div class="sale-badge">
+NEW
+</div>
+
+</div>
+
+<div class="wow-content">
+
+<h3>
+Deep Wave Bundles
+</h3>
+
+<div class="stars">
+★★★★★ <span>(318)</span>
+</div>
+
+<div class="price-row">
+
+<span class="price">
+From £95
+</span>
+
+<span class="old-price">
+£180
+</span>
+
+</div>
+
+</div>
+
+</a>
+
+
+
+
+
+
+
+
+<a
+href="straight.html"
+class="wow-card"
+>
+
+<div class="wow-image-wrap">
+
+<img
+src="images/wig2.jpg"
+alt="Luxury Closure Bundle"
+>
+
+<div class="sale-badge">
+VIRAL
+</div>
+
+</div>
+
+<div class="wow-content">
+
+<h3>
+Luxury Closure Bundle
+</h3>
+
+<div class="stars">
+★★★★★ <span>(505)</span>
+</div>
+
+<div class="price-row">
+
+<span class="price">
+From £120
+</span>
+
+<span class="old-price">
+£220
+</span>
+
+</div>
+
+</div>
+
+</a>
+
+
+
+
+
+</div>
+
+</section>
+
 </body>
+
 </html>
