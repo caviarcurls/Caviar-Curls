@@ -1,210 +1,105 @@
-const wigs = [
+require('dotenv').config();
 
-  {
-    id: "straight-cambodian-black",
-    name: "Straight Cambodian Virgin Wig",
-    category: "straight",
-    image: "images/Straight Cambodian Virgin hair.jpg",
-    description: "Silky luxury straight wig with HD lace.",
-    badge: "BESTSELLER",
-    variants: {
-      '16" - 13x4 HD': 100,
-      '18" - 13x4 HD': 115,
-      '20" - 13x4 HD': 130,
-      '22" - 13x4 HD': 155,
-      '24" - 13x4 HD': 170,
-      '26" - 13x4 HD': 185,
-      '28" - 13x4 HD': 200,
-      '30" - 13x4 HD': 215
-    }
-  },
+const express = require('express');
+const path = require('path');
+const cors = require('cors');
+const Stripe = require('stripe');
 
-  {
-    id: "bodywave-natural",
-    name: "Body Wave Cambodian Wig",
-    category: "wave",
-    image: "images/Body wave Cambodian virgin hair.jpg",
-    description: "Luxury body wave texture with HD lace.",
-    badge: "LUXURY",
-    variants: {
-      '16" - 13x6 HD': 100,
-      '18" - 13x6 HD': 115,
-      '20" - 13x6 HD': 130,
-      '22" - 13x6 HD': 155,
-      '24" - 13x6 HD': 170,
-      '26" - 13x6 HD': 185,
-      '28" - 13x6 HD': 200,
-      '30" - 13x6 HD': 215
-    }
-  },
+const app = express();
+const PORT = Number(process.env.PORT) || 3000;
+const SITE_URL = process.env.SITE_URL;
+const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
+const PUBLIC_DIR = __dirname;
 
-  {
-    id: "deepwave-natural",
-    name: "Deep Wave Cambodian Wig",
-    category: "wave",
-    image: "images/Deep wave Cambodian virgin hair.jpg",
-    description: "Defined luxury curls with premium volume.",
-    badge: "TRENDING",
-    variants: {
-      '16" - 13x6 HD': 110,
-      '18" - 13x6 HD': 120,
-      '20" - 13x6 HD': 135,
-      '22" - 13x6 HD': 160,
-      '24" - 13x6 HD': 175,
-      '26" - 13x6 HD': 190,
-      '28" - 13x6 HD': 205,
-      '30" - 13x6 HD': 220
-    }
-  },
-
-  {
-    id: "loosewave-natural",
-    name: "Loose Wave Cambodian Wig",
-    category: "wave",
-    image: "images/Loose wave Cambodian virgin hair.jpg",
-    description: "Soft luxury loose wave texture.",
-    badge: "HOT",
-    variants: {
-      '16" - 13x6 HD': 110,
-      '18" - 13x6 HD': 120,
-      '20" - 13x6 HD': 135,
-      '22" - 13x6 HD': 160,
-      '24" - 13x6 HD': 175,
-      '26" - 13x6 HD': 190,
-      '28" - 13x6 HD': 205,
-      '30" - 13x6 HD': 220
-    }
-  },
-
-  {
-    id: "ssd-bodywave-brown",
-    name: "SSD Bodywave Brown 250% Density Wig",
-    category: "wave",
-    image: "images/bodywave-brown.jpg",
-    description: "Luxury brown SSD bodywave wig.",
-    badge: "250% DENSITY",
-    variants: {
-      '16" - 13x6 HD': 145,
-      '18" - 13x6 HD': 150,
-      '20" - 13x6 HD': 158,
-      '22" - 13x6 HD': 163,
-      '24" - 13x6 HD': 170,
-      '26" - 13x6 HD': 185
-    }
-  },
-
-  {
-    id: "ssd-bodywave-highlight",
-    name: "SSD Blonde Highlight 250% Density Wig",
-    category: "highlight",
-    image: "images/blonde-highlight.jpg",
-    description: "Luxury blonde highlight SSD wig.",
-    badge: "BLONDE",
-    variants: {
-      '16" - 13x6 HD': 145,
-      '18" - 13x6 HD': 150,
-      '20" - 13x6 HD': 158,
-      '22" - 13x6 HD': 163,
-      '24" - 13x6 HD': 170,
-      '26" - 13x6 HD': 185
-    }
-  },
-
-  {
-    id: "jetblack-bob",
-    name: "Jet Black Bob Wig",
-    category: "bob",
-    image: "images/bob.jpg",
-    description: "Luxury jet black HD bob wig.",
-    badge: "BOB",
-    variants: {
-      '8\" - 13x6 HD': 105,
-      '10\" - 13x6 HD': 125,
-      '12\" - 13x6 HD': 145
-    }
-  },
-
-  {
-    id: "burgundy-bob",
-    name: "Burgundy Bob Wig",
-    category: "bob",
-    image: "images/waterwave-burgundy.jpg",
-    description: "Luxury burgundy HD bob wig.",
-    badge: "BURGUNDY",
-    variants: {
-      '8\" - 13x6 HD': 110,
-      '10\" - 13x6 HD': 130,
-      '12\" - 13x6 HD': 150
-    }
-  },
-
-  {
-    id: "blonde-bob",
-    name: "Blonde Bob Wig",
-    category: "bob",
-    image: "images/blonde-highlight.jpg",
-    description: "Luxury blonde HD bob wig.",
-    badge: "BLONDE",
-    variants: {
-      '8\" - 13x6 HD': 115,
-      '10\" - 13x6 HD': 135,
-      '12\" - 13x6 HD': 155
-    }
-  }
-
-];
-
-const shopGrid = document.querySelector(".shop-grid");
-
-function renderProducts() {
-  shopGrid.innerHTML = "";
-
-  wigs.forEach((wig) => {
-
-    const firstPrice = Object.values(wig.variants)[0];
-    const options = Object.entries(wig.variants)
-      .map(([name, price]) =>
-        `<option value="${price}">${name} - £${price}</option>`
-      )
-      .join("");
-
-    const card = document.createElement("article");
-
-    card.className = "luxury-product-card";
-
-    card.innerHTML = `
-      <div class="luxury-image-wrap">
-        <img src="${wig.image}" alt="${wig.name}">
-        <div class="luxury-badge">${wig.badge}</div>
-      </div>
-
-      <div class="luxury-product-content">
-        <h3>${wig.name}</h3>
-
-        <p class="luxury-description">
-          ${wig.description}
-        </p>
-
-        <div class="luxury-price-row">
-          <span class="luxury-price">
-            From £${firstPrice}
-          </span>
-        </div>
-
-        <select class="luxury-select">
-          ${options}
-        </select>
-
-        <button class="luxury-cart-btn">
-          Add To Bag
-        </button>
-      </div>
-    `;
-
-    shopGrid.appendChild(card);
-
-  });
-
+if (!SITE_URL) {
+  console.warn('Missing SITE_URL. Set it in your environment before deploying.');
 }
 
-renderProducts();
+if (!STRIPE_SECRET_KEY) {
+  console.warn('Missing STRIPE_SECRET_KEY. Checkout will fail until it is set.');
+}
+
+const stripe = STRIPE_SECRET_KEY ? Stripe(STRIPE_SECRET_KEY) : null;
+
+app.use(cors());
+app.use(express.json());
+app.use(express.static(PUBLIC_DIR));
+
+app.get('/', (_req, res) => {
+  res.sendFile(path.join(PUBLIC_DIR, 'index.html'));
+});
+
+app.get(['/success', '/success.html'], (_req, res) => {
+  res.sendFile(path.join(PUBLIC_DIR, 'success.html'));
+});
+
+app.get(['/cancel', '/cancel.html'], (_req, res) => {
+  res.sendFile(path.join(PUBLIC_DIR, 'cancel.html'));
+});
+
+app.get('/config', (_req, res) => {
+  res.json({
+    stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY || '',
+    siteUrl: SITE_URL || ''
+  });
+});
+
+app.post('/create-checkout-session', async (req, res) => {
+  try {
+    if (!stripe) {
+      return res.status(500).json({
+        error: 'Stripe is not configured yet. Add your Stripe keys in the environment before launching.'
+      });
+    }
+
+    if (!SITE_URL) {
+      return res.status(500).json({
+        error: 'SITE_URL is not configured yet. Add your public site URL before launching.'
+      });
+    }
+
+    const items = Array.isArray(req.body.items) ? req.body.items : [];
+
+    if (!items.length) {
+      return res.status(400).json({ error: 'Cart is empty.' });
+    }
+
+    const line_items = items.map((item) => {
+      const amount = Math.round(Number(item.price) * 100);
+
+      if (!item.name || !Number.isFinite(amount) || amount <= 0) {
+        throw new Error('Invalid cart item detected.');
+      }
+
+      return {
+        price_data: {
+          currency: 'gbp',
+          product_data: {
+            name: item.name
+          },
+          unit_amount: amount
+        },
+        quantity: 1
+      };
+    });
+
+    const session = await stripe.checkout.sessions.create({
+      mode: 'payment',
+      payment_method_types: ['card'],
+      line_items,
+      success_url: `${SITE_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${SITE_URL}/cancel`
+    });
+
+    res.json({ id: session.id });
+  } catch (error) {
+    console.error('Stripe session creation failed:', error);
+    res.status(500).json({
+      error: error.message || 'Failed to create checkout session.'
+    });
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
