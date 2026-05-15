@@ -182,6 +182,92 @@ prices: {
 "28": 270,
 "30": 285
 }
+},
+
+ssdbrown: {
+title: "SSD Brown Wig",
+type: "Luxury Colored Wig",
+image: "images/wig2.jpg",
+description: "Luxury SSD brown wig with soft premium finish.",
+prices: {
+"16": 190,
+"18": 205,
+"20": 220,
+"22": 235,
+"24": 250,
+"26": 265,
+"28": 280,
+"30": 295
+}
+},
+
+ssdbalayage: {
+title: "SSD Balayage Wig",
+type: "Luxury Colored Wig",
+image: "images/home.jpg",
+description: "Luxury balayage wig with premium blended tones.",
+prices: {
+"16": 210,
+"18": 225,
+"20": 240,
+"22": 255,
+"24": 270,
+"26": 285,
+"28": 300,
+"30": 315
+}
+},
+
+bobburgundy: {
+title: "Vietnamese Bobs Burgundy",
+type: "Luxury Bob Wig",
+image: "images/wig1.jpg",
+description: "Luxury burgundy Vietnamese bob with silky finish.",
+prices: {
+"10": 140,
+"12": 150,
+"14": 160,
+"16": 170
+}
+},
+
+bobbrown: {
+title: "Vietnamese Bobs Brown",
+type: "Luxury Bob Wig",
+image: "images/wig2.jpg",
+description: "Luxury brown Vietnamese bob with premium fullness.",
+prices: {
+"10": 145,
+"12": 155,
+"14": 165,
+"16": 175
+}
+},
+
+bobblack: {
+title: "Vietnamese Bobs Black",
+type: "Luxury Bob Wig",
+image: "images/home.jpg",
+description: "Luxury black Vietnamese bob with soft sleek finish.",
+prices: {
+"10": 135,
+"12": 145,
+"14": 155,
+"16": 165
+}
+},
+
+bobblonde: {
+title: "Vietnamese Bobs Blonde",
+type: "Luxury Blonde Bob Wig",
+image: "images/wig1.jpg",
+description: "Luxury blonde Vietnamese bob with premium color blend.",
+prices: {
+"10": 160,
+"12": 170,
+"14": 180,
+"16": 190
+}
 }
 
 };
