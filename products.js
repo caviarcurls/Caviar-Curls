@@ -84,6 +84,11 @@ straightwig: {
 title: "Straight Cambodian Wig",
 type: "13x4 HD Lace Frontal Wig",
 density: "250% Density",
+lace: [
+"5x5 Closure",
+"13x4 Frontal",
+"13x6 Frontal"
+],
 image: "images/Straight Cambodian Virgin hair.jpg",
 description: "Cambodian Virgin Hair 13x4 HD Lace frontal wig.",
 prices: {
@@ -102,6 +107,11 @@ bodywavewig: {
 title: "Body Wave Cambodian Wig",
 type: "13x4 HD Lace Frontal Wig",
 density: "250% Density",
+lace: [
+"5x5 Closure",
+"13x4 Frontal",
+"13x6 Frontal"
+],
 image: "images/Body wave Cambodian virgin hair.jpg",
 description: "Cambodian Virgin Hair 13x4 HD Lace frontal wig.",
 prices: {
@@ -119,6 +129,10 @@ prices: {
 deepwavewig: {
 title: "Deep Wave Wig",
 type: "13x4 HD Lace Frontal Wig",
+lace: [
+"5x5 Closure",
+"13x4 Frontal"
+],
 image: "images/wig1.jpg",
 description: "Luxury deep wave wig with soft premium curls.",
 prices: {
@@ -136,6 +150,10 @@ prices: {
 loosewavewig: {
 title: "Loose Wave Wig",
 type: "13x4 HD Lace Frontal Wig",
+lace: [
+"5x5 Closure",
+"13x4 Frontal"
+],
 image: "images/home.jpg",
 description: "Luxury loose wave wig with soft flowing texture.",
 prices: {
@@ -153,6 +171,10 @@ prices: {
 waterwavewig: {
 title: "Water Wave Wig",
 type: "13x4 HD Lace Frontal Wig",
+lace: [
+"5x5 Closure",
+"13x4 Frontal"
+],
 image: "images/wig2.jpg",
 description: "Luxury water wave wig with defined soft curls.",
 prices: {
@@ -187,6 +209,10 @@ prices: {
 ssdbrownbodywave: {
 title: "SSD Brown Body Wave Wig",
 type: "Luxury Colored Wig",
+lace: [
+"5x5 Closure",
+"13x4 Frontal"
+],
 image: "images/wig2.jpg",
 description: "Luxury SSD brown body wave wig with premium softness.",
 prices: {
@@ -204,6 +230,10 @@ prices: {
 ssdbalayagebodywave: {
 title: "SSD Balayage Body Wave Wig",
 type: "Luxury Colored Wig",
+lace: [
+"5x5 Closure",
+"13x4 Frontal"
+],
 image: "images/home.jpg",
 description: "Luxury SSD balayage body wave wig with premium blend.",
 prices: {
@@ -301,6 +331,8 @@ product.description;
 document.getElementById("product-image").src =
 product.image;
 
+/* LENGTH */
+
 const lengthSelect =
 document.getElementById("length-select");
 
@@ -318,6 +350,37 @@ option.textContent = `${length}"`;
 lengthSelect.appendChild(option);
 
 });
+
+/* LACE */
+
+if(product.lace){
+
+const laceGroup =
+document.getElementById("lace-group");
+
+const laceSelect =
+document.getElementById("lace-select");
+
+laceGroup.style.display = "block";
+
+laceSelect.innerHTML = "";
+
+product.lace.forEach(lace => {
+
+const option =
+document.createElement("option");
+
+option.value = lace;
+
+option.textContent = lace;
+
+laceSelect.appendChild(option);
+
+});
+
+}
+
+/* PRICE */
 
 function updatePrice(){
 
