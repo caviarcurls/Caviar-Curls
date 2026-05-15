@@ -906,3 +906,114 @@ button {
     grid-template-columns: repeat(3,1fr);
   }
 }
+.shop-header {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  background: white;
+
+  border-bottom:
+    1px solid rgba(0,0,0,0.05);
+}
+
+.shop-header-inner {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 18px;
+}
+
+.shop-icons {
+
+  display: flex;
+
+  gap: 18px;
+
+  font-size: 1.5rem;
+
+  color: #3b241d;
+}
+
+.shop-top {
+
+  padding: 30px 18px 10px;
+}
+
+.shop-mini {
+
+  color: #d7a56d;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.18em;
+
+  font-size: 0.72rem;
+
+  margin-bottom: 10px;
+}
+
+.shop-grid-wrap {
+
+  padding: 20px 18px 60px;
+}
+
+.wow-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2,1fr);
+
+  gap: 14px;
+}
+
+.wow-card {
+
+  background: white;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.06);
+
+  transition: 0.3s ease;
+}
+
+.wow-image-wrap {
+
+  position: relative;
+}
+
+.wow-image-wrap img {
+
+  height: 250px;
+
+  object-fit: cover;
+}
+
+.sale-badge {
+
+  position: absolute;
+
+  top: 10px;
+  left: 10px;
+
+  background: #2a1711;
+
+  color: #d7a56d;
+
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  font-size: 0.62rem;
+}
