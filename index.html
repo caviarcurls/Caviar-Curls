@@ -140,9 +140,17 @@ body{
   max-width:520px;
 }
 
+/* HERO BUTTONS */
+
+.hero-buttons{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
 .hero-btn{
   display:inline-block;
-  padding:16px 32px;
+  padding:16px 30px;
   border-radius:999px;
   background:white;
   color:#111;
@@ -157,78 +165,78 @@ body{
   transform:translateY(-2px);
 }
 
-/* SHOP CATEGORIES */
+.hero-btn-outline{
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.35);
+  color:white;
+  backdrop-filter:blur(10px);
+}
 
-.shop-categories{
+/* PRODUCTS */
+
+.homepage-products{
   padding:90px 20px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:28px;
+  background:white;
+}
+
+.products-header{
   max-width:1400px;
   margin:auto;
+  margin-bottom:40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.category-card{
-  position:relative;
-  height:620px;
-  overflow:hidden;
-  border-radius:28px;
-  text-decoration:none;
-}
-
-.category-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:0.5s ease;
-}
-
-.category-card:hover img{
-  transform:scale(1.05);
-}
-
-.category-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    to top,
-    rgba(0,0,0,0.72),
-    rgba(0,0,0,0.12)
-  );
-}
-
-.category-content{
-  position:absolute;
-  bottom:35px;
-  left:28px;
-  z-index:2;
-  color:white;
-}
-
-.category-content p{
-  font-size:12px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  color:#f1c48c;
-  margin-bottom:12px;
-}
-
-.category-content h2{
-  font-size:60px;
-  line-height:0.9;
+.products-header h2{
+  font-size:52px;
   font-family:'Cormorant Garamond',serif;
-  margin-bottom:18px;
 }
 
-.category-content span{
-  display:inline-block;
-  padding:14px 24px;
-  background:white;
+.products-header a{
+  text-decoration:none;
   color:#111;
-  border-radius:999px;
-  font-size:12px;
+  font-size:14px;
   letter-spacing:2px;
   text-transform:uppercase;
+}
+
+.product-grid{
+  max-width:1400px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+}
+
+.product-card{
+  text-decoration:none;
+  color:#111;
+}
+
+.product-card img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:18px;
+  transition:0.4s ease;
+}
+
+.product-card:hover img{
+  transform:scale(1.03);
+}
+
+.product-info{
+  padding-top:16px;
+}
+
+.product-info h3{
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+.product-info p{
+  color:#7b5d47;
 }
 
 /* BENEFITS */
@@ -323,16 +331,18 @@ footer{
 
 @media(max-width:768px){
 
-  .category-card{
-    height:500px;
-  }
-
-  .category-content h2{
-    font-size:48px;
-  }
-
   .hero{
     min-height:85vh;
+  }
+
+  .products-header{
+    flex-direction:column;
+    gap:14px;
+    align-items:flex-start;
+  }
+
+  .products-header h2{
+    font-size:42px;
   }
 
 }
@@ -395,69 +405,97 @@ footer{
       designed for effortless beauty and confidence.
     </p>
 
-    <a href="wigs.html" class="hero-btn">
-      Shop Wigs
-    </a>
+    <div class="hero-buttons">
+
+      <a href="wigs.html" class="hero-btn">
+        Shop Wigs
+      </a>
+
+      <a href="bundles.html" class="hero-btn hero-btn-outline">
+        Shop Bundles
+      </a>
+
+      <a href="frontals.html" class="hero-btn hero-btn-outline">
+        Lace Frontals
+      </a>
+
+    </div>
 
   </div>
 
 </section>
 
-<section class="shop-categories">
+<section class="homepage-products">
 
-  <a href="wigs.html" class="category-card">
+  <div class="products-header">
 
-    <img src="images/wig1.jpg" alt="Wigs">
+    <h2>Best Sellers</h2>
 
-    <div class="category-overlay"></div>
+    <a href="wigs.html">
+      View All
+    </a>
 
-    <div class="category-content">
+  </div>
 
-      <p>Luxury Collection</p>
+  <div class="product-grid">
 
-      <h2>Wigs</h2>
+    <a href="product1.html" class="product-card">
 
-      <span>Shop Now</span>
+      <img src="images/wig1.jpg" alt="Body Wave Wig">
 
-    </div>
+      <div class="product-info">
 
-  </a>
+        <h3>HD Body Wave Wig</h3>
 
-  <a href="bundles.html" class="category-card">
+        <p>£249</p>
 
-    <img src="images/Body wave Cambodian virgin hair.jpg" alt="Bundles">
+      </div>
 
-    <div class="category-overlay"></div>
+    </a>
 
-    <div class="category-content">
+    <a href="product2.html" class="product-card">
 
-      <p>Premium Hair</p>
+      <img src="images/home.jpg" alt="Straight Wig">
 
-      <h2>Bundles</h2>
+      <div class="product-info">
 
-      <span>Shop Now</span>
+        <h3>Straight HD Wig</h3>
 
-    </div>
+        <p>£279</p>
 
-  </a>
+      </div>
 
-  <a href="frontals.html" class="category-card">
+    </a>
 
-    <img src="images/Straight Cambodian Virgin hair.jpg" alt="Lace Frontals">
+    <a href="product3.html" class="product-card">
 
-    <div class="category-overlay"></div>
+      <img src="images/Straight Cambodian Virgin hair.jpg" alt="Luxury Wig">
 
-    <div class="category-content">
+      <div class="product-info">
 
-      <p>Flawless Installs</p>
+        <h3>Luxury Straight Wig</h3>
 
-      <h2>Lace Frontals</h2>
+        <p>£265</p>
 
-      <span>Shop Now</span>
+      </div>
 
-    </div>
+    </a>
 
-  </a>
+    <a href="product4.html" class="product-card">
+
+      <img src="images/Body wave Cambodian virgin hair.jpg" alt="Deep Wave Wig">
+
+      <div class="product-info">
+
+        <h3>Deep Wave Wig</h3>
+
+        <p>£295</p>
+
+      </div>
+
+    </a>
+
+  </div>
 
 </section>
 
