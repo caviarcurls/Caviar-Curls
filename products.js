@@ -867,4 +867,40 @@ updatePrice
 
 populateLengths();
 
+/* =========================
+CHECKOUT BUTTON
+========================= */
+
+const cartButton =
+document.querySelector(".luxury-cart-btn");
+
+cartButton.addEventListener("click", ()=>{
+
+const selectedLace =
+laceSelect.value;
+
+const selectedLength =
+lengthSelect.value;
+
+const finalPrice =
+product.prices[selectedLace][selectedLength];
+
+localStorage.setItem(
+"checkoutProduct",
+JSON.stringify({
+
+title:product.title,
+type:selectedLace,
+length:selectedLength,
+price:finalPrice,
+image:product.image
+
+})
+);
+
+window.location.href =
+"checkout.html";
+
+});
+
 }
