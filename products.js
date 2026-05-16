@@ -1,6 +1,8 @@
 const products = {
 
-/* CAMBODIAN WIGS */
+/* =========================
+CAMBODIAN WIGS
+========================= */
 
 straightwig:{
 title:"Straight Cambodian Wig",
@@ -32,6 +34,27 @@ image:"images/Body wave Cambodian virgin hair.jpg",
 description:"Luxury Cambodian body wave wig.",
 prices:{
 "13x4 Frontal":{
+"16":110,
+"18":125,
+"20":140,
+"22":155,
+"24":170,
+"26":185,
+"28":200,
+"30":215
+}
+}
+},
+
+deepwavewig:{
+title:"Deep Wave Cambodian Wig",
+type:"13x4 HD Lace Frontal Wig",
+density:"250% Density",
+lace:["13x4 Frontal"],
+image:"images/wig1.jpg",
+description:"Luxury Cambodian deep wave wig.",
+prices:{
+"13x4 Frontal":{
 "16":120,
 "18":135,
 "20":150,
@@ -44,13 +67,34 @@ prices:{
 }
 },
 
-deepwavewig:{
-title:"Deep Wave Cambodian Wig",
+loosewavewig:{
+title:"Loose Wave Cambodian Wig",
 type:"13x4 HD Lace Frontal Wig",
 density:"250% Density",
 lace:["13x4 Frontal"],
-image:"images/wig1.jpg",
-description:"Luxury Cambodian deep wave wig.",
+image:"images/home.jpg",
+description:"Luxury Cambodian loose wave wig.",
+prices:{
+"13x4 Frontal":{
+"16":125,
+"18":140,
+"20":155,
+"22":170,
+"24":185,
+"26":200,
+"28":215,
+"30":230
+}
+}
+},
+
+waterwavewig:{
+title:"Water Wave Cambodian Wig",
+type:"13x4 HD Lace Frontal Wig",
+density:"250% Density",
+lace:["13x4 Frontal"],
+image:"images/wig2.jpg",
+description:"Luxury Cambodian water wave wig.",
 prices:{
 "13x4 Frontal":{
 "16":130,
@@ -65,49 +109,9 @@ prices:{
 }
 },
 
-loosewavewig:{
-title:"Loose Wave Cambodian Wig",
-type:"13x4 HD Lace Frontal Wig",
-density:"250% Density",
-lace:["13x4 Frontal"],
-image:"images/home.jpg",
-description:"Luxury Cambodian loose wave wig.",
-prices:{
-"13x4 Frontal":{
-"16":135,
-"18":150,
-"20":165,
-"22":180,
-"24":195,
-"26":210,
-"28":225,
-"30":240
-}
-}
-},
-
-waterwavewig:{
-title:"Water Wave Cambodian Wig",
-type:"13x4 HD Lace Frontal Wig",
-density:"250% Density",
-lace:["13x4 Frontal"],
-image:"images/wig2.jpg",
-description:"Luxury Cambodian water wave wig.",
-prices:{
-"13x4 Frontal":{
-"16":145,
-"18":160,
-"20":175,
-"22":190,
-"24":205,
-"26":220,
-"28":235,
-"30":250
-}
-}
-},
-
-/* RAW VIETNAMESE */
+/* =========================
+RAW VIETNAMESE
+========================= */
 
 rawvietnamese:{
 title:"RAW Vietnamese Wig",
@@ -122,15 +126,6 @@ description:"Luxury RAW Vietnamese wig.",
 prices:{
 
 "13x4 HD":{
-"20":230,
-"22":245,
-"24":260,
-"26":275,
-"28":290,
-"30":305
-},
-
-"5x5 HD":{
 "20":210,
 "22":225,
 "24":240,
@@ -139,19 +134,30 @@ prices:{
 "30":285
 },
 
+"5x5 HD":{
+"20":190,
+"22":205,
+"24":220,
+"26":235,
+"28":250,
+"30":265
+},
+
 "2x6 HD":{
-"20":220,
-"22":235,
-"24":250,
-"26":265,
-"28":280,
-"30":295
+"20":200,
+"22":215,
+"24":230,
+"26":245,
+"28":260,
+"30":275
 }
 
 }
 },
 
-/* SSD BODYWAVE */
+/* =========================
+SSD WIGS
+========================= */
 
 ssdbrownbodywave:{
 title:"SSD Brown Body Wave Wig",
@@ -165,21 +171,21 @@ description:"Luxury SSD brown body wave wig.",
 prices:{
 
 "13x6 HD":{
-"16":220,
-"18":235,
-"20":250,
-"22":265,
-"24":280,
-"26":295
+"16":180,
+"18":195,
+"20":210,
+"22":225,
+"24":240,
+"26":255
 },
 
 "5x5 HD":{
-"16":190,
-"18":205,
-"20":220,
-"22":235,
-"24":250,
-"26":265
+"16":160,
+"18":175,
+"20":190,
+"22":205,
+"24":220,
+"26":235
 }
 
 }
@@ -197,27 +203,25 @@ description:"Luxury SSD balayage wig.",
 prices:{
 
 "13x6 HD":{
-"16":240,
-"18":255,
-"20":270,
-"22":285,
-"24":300,
-"26":315
+"16":190,
+"18":205,
+"20":220,
+"22":235,
+"24":250,
+"26":265
 },
 
 "5x5 HD":{
-"16":210,
-"18":225,
-"20":240,
-"22":255,
-"24":270,
-"26":285
+"16":170,
+"18":185,
+"20":200,
+"22":215,
+"24":230,
+"26":245
 }
 
 }
 },
-
-/* SSD WATERWAVE */
 
 ssdwaterwaveburgundy:{
 title:"SSD Waterwave Burgundy Wig",
@@ -228,14 +232,14 @@ description:"Luxury SSD burgundy waterwave wig.",
 prices:{
 
 "13x6 HD":{
-"16":220,
-"18":235,
-"20":250,
-"22":265,
-"24":280,
-"26":295,
-"28":310,
-"30":325
+"16":190,
+"18":205,
+"20":220,
+"22":235,
+"24":250,
+"26":265,
+"28":280,
+"30":295
 }
 
 }
@@ -246,48 +250,53 @@ title:"SSD Waterwave Brown Highlight Wig",
 type:"Luxury Highlight Wig",
 lace:["13x6 HD"],
 image:"images/home.jpg",
-description:"Luxury SSD brown highlight waterwave wig.",
+description:"Luxury SSD brown highlight wig.",
 prices:{
 
 "13x6 HD":{
-"16":230,
-"18":245,
-"20":260,
-"22":275,
-"24":290,
-"26":305,
-"28":320,
-"30":335
+"16":115,
+"18":130,
+"20":150,
+"22":175,
+"24":210,
+"26":250,
+"28":275,
+"30":350
 }
 
 }
 },
 
-/* BLONDE */
+/* =========================
+BLONDE HIGHLIGHT
+========================= */
 
 blondehighlight:{
 title:"Blonde Highlight Wig",
 type:"Luxury Blonde Highlight Wig",
+density:"250% Density",
 lace:["13x4 Lace"],
 image:"images/wig1.jpg",
 description:"Luxury blonde highlight wig.",
 prices:{
 
 "13x4 Lace":{
-"16":240,
-"18":255,
-"20":270,
-"22":285,
-"24":300,
-"26":315,
-"28":330,
-"30":345
+"16":115,
+"18":130,
+"20":150,
+"22":175,
+"24":210,
+"26":250,
+"28":275,
+"30":350
 }
 
 }
 },
 
-/* BOBS */
+/* =========================
+BOBS
+========================= */
 
 bobburgundy:{
 title:"Vietnamese Bobs Burgundy",
@@ -301,15 +310,15 @@ description:"Luxury burgundy bob wig.",
 prices:{
 
 "13x6 HD":{
-"8":190,
-"10":200,
-"12":210
+"8":105,
+"10":125,
+"12":145
 },
 
 "5x5 HD":{
-"8":170,
-"10":180,
-"12":190
+"8":100,
+"10":110,
+"12":120
 }
 
 }
@@ -327,15 +336,15 @@ description:"Luxury brown bob wig.",
 prices:{
 
 "13x6 HD":{
-"8":195,
-"10":205,
-"12":215
+"8":105,
+"10":125,
+"12":145
 },
 
 "5x5 HD":{
-"8":175,
-"10":185,
-"12":195
+"8":100,
+"10":110,
+"12":120
 }
 
 }
@@ -353,15 +362,15 @@ description:"Luxury black bob wig.",
 prices:{
 
 "13x6 HD":{
-"8":185,
-"10":195,
-"12":205
+"8":105,
+"10":125,
+"12":145
 },
 
 "5x5 HD":{
-"8":165,
-"10":175,
-"12":185
+"8":100,
+"10":110,
+"12":120
 }
 
 }
@@ -379,21 +388,23 @@ description:"Luxury blonde bob wig.",
 prices:{
 
 "13x6 HD":{
-"8":210,
-"10":220,
-"12":230
+"8":105,
+"10":125,
+"12":145
 },
 
 "5x5 HD":{
-"8":190,
-"10":200,
-"12":210
+"8":100,
+"10":110,
+"12":120
 }
 
 }
 },
 
-/* BUNDLES */
+/* =========================
+BUNDLES
+========================= */
 
 straightbundles:{
 title:"Straight Bundles",
@@ -402,16 +413,19 @@ lace:["3 Bundles"],
 image:"images/Straight Cambodian Virgin hair.jpg",
 description:"Luxury straight bundles.",
 prices:{
+
 "3 Bundles":{
-"16":85,
-"18":95,
-"20":105,
-"22":115,
-"24":125,
-"26":135,
-"28":145,
-"30":155
+"14":38,
+"16":48,
+"18":58,
+"20":68,
+"22":78,
+"24":88,
+"26":98,
+"28":108,
+"30":118
 }
+
 }
 },
 
@@ -422,16 +436,19 @@ lace:["3 Bundles"],
 image:"images/Body wave Cambodian virgin hair.jpg",
 description:"Luxury body wave bundles.",
 prices:{
+
 "3 Bundles":{
-"16":90,
-"18":100,
-"20":110,
-"22":120,
-"24":130,
-"26":140,
-"28":150,
-"30":160
+"14":40,
+"16":50,
+"18":60,
+"20":70,
+"22":80,
+"24":90,
+"26":100,
+"28":110,
+"30":120
 }
+
 }
 },
 
@@ -442,16 +459,19 @@ lace:["3 Bundles"],
 image:"images/wig1.jpg",
 description:"Luxury deep wave bundles.",
 prices:{
+
 "3 Bundles":{
-"16":95,
-"18":105,
-"20":115,
-"22":125,
-"24":135,
-"26":145,
-"28":155,
-"30":165
+"14":42,
+"16":52,
+"18":62,
+"20":72,
+"22":82,
+"24":92,
+"26":102,
+"28":112,
+"30":122
 }
+
 }
 },
 
@@ -462,102 +482,69 @@ lace:["3 Bundles"],
 image:"images/wig2.jpg",
 description:"Luxury water wave bundles.",
 prices:{
+
 "3 Bundles":{
-"16":100,
-"18":110,
-"20":120,
-"22":130,
-"24":140,
-"26":150,
-"28":160,
-"30":170
+"14":45,
+"16":55,
+"18":65,
+"20":75,
+"22":85,
+"24":95,
+"26":105,
+"28":115,
+"30":125
 }
+
 }
 },
 
-/* FRONTALS */
-
-hd13x4frontal:{
-title:"13x4 HD Frontal",
-type:"HD Lace Frontal",
-lace:["13x4 HD"],
-image:"images/wig1.jpg",
-description:"Luxury HD frontal.",
-prices:{
-"13x4 HD":{
-"14":85,
-"16":95,
-"18":105,
-"20":115
-}
-}
-},
+/* =========================
+FRONTALS
+========================= */
 
 hd13x6frontal:{
 title:"13x6 HD Frontal",
 type:"HD Lace Frontal",
 lace:["13x6 HD"],
+image:"images/wig1.jpg",
+description:"Luxury HD frontal.",
+prices:{
+
+"13x6 HD":{
+"14":55,
+"16":65,
+"18":75,
+"20":85,
+"22":100
+}
+
+}
+},
+
+hd13x4frontal:{
+title:"13x4 HD Frontal",
+type:"HD Lace Frontal",
+lace:["13x4 HD"],
 image:"images/wig2.jpg",
 description:"Luxury HD frontal.",
 prices:{
-"13x6 HD":{
-"14":95,
-"16":105,
-"18":115,
-"20":125
-}
-}
-},
 
-hd5x5closure:{
-title:"5x5 HD Closure",
-type:"HD Lace Closure",
-lace:["5x5 HD"],
-image:"images/home.jpg",
-description:"Luxury HD closure.",
-prices:{
-"5x5 HD":{
-"14":75,
-"16":85,
-"18":95,
-"20":105
+"13x4 HD":{
+"14":50,
+"16":60,
+"18":70,
+"20":80,
+"22":90
 }
-}
-},
 
-hd6x6closure:{
-title:"6x6 HD Closure",
-type:"HD Lace Closure",
-lace:["6x6 HD"],
-image:"images/wig1.jpg",
-description:"Luxury HD closure.",
-prices:{
-"6x6 HD":{
-"14":80,
-"16":90,
-"18":100,
-"20":110
-}
-}
-},
-
-hd2x6closure:{
-title:"2x6 HD Closure",
-type:"HD Lace Closure",
-lace:["2x6 HD"],
-image:"images/wig2.jpg",
-description:"Luxury HD closure.",
-prices:{
-"2x6 HD":{
-"14":70,
-"16":80,
-"18":90,
-"20":100
-}
 }
 }
 
 };
+
+/* =========================
+PRODUCT ENGINE
+========================= */
 
 const params = new URLSearchParams(window.location.search);
 
