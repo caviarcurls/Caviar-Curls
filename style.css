@@ -397,48 +397,48 @@ footer{
 }
 
 /* =========================
-LUXURY MOBILE CHECKOUT
+WOWANGEL STYLE CHECKOUT
 ========================= */
 
 .checkout-page{
-padding:24px 14px 120px;
+padding:24px 14px 100px;
 max-width:100%;
 }
 
 .checkout-layout{
 display:flex;
 flex-direction:column;
-gap:22px;
+gap:24px;
 }
 
-.checkout-form,
-.checkout-summary{
+/* FORM */
+
+.checkout-form{
 background:white;
 border-radius:34px;
 padding:28px;
 box-shadow:
 0 8px 30px rgba(0,0,0,0.04);
-width:100%;
 }
 
-.checkout-form h2,
-.checkout-summary h3{
+.checkout-form h2{
 font-size:62px;
 line-height:0.9;
 font-family:'Cormorant Garamond',serif;
-margin-bottom:30px;
 font-weight:700;
+margin-bottom:28px;
+letter-spacing:-2px;
 }
 
 .form-group{
-margin-bottom:24px;
+margin-bottom:22px;
 }
 
 .form-group label{
 display:block;
 font-size:15px;
-margin-bottom:10px;
 font-weight:600;
+margin-bottom:10px;
 }
 
 .form-group input{
@@ -452,9 +452,30 @@ background:#faf8f5;
 outline:none;
 }
 
+/* SUMMARY */
+
+.checkout-summary{
+background:white;
+border-radius:34px;
+padding:28px;
+box-shadow:
+0 8px 30px rgba(0,0,0,0.04);
+}
+
+.checkout-summary h3{
+font-size:62px;
+line-height:0.9;
+font-family:'Cormorant Garamond',serif;
+font-weight:700;
+margin-bottom:28px;
+letter-spacing:-2px;
+}
+
+/* PRODUCT */
+
 .product-card{
 display:flex;
-gap:20px;
+gap:18px;
 align-items:flex-start;
 margin-bottom:28px;
 }
@@ -462,15 +483,15 @@ margin-bottom:28px;
 .product-card img{
 width:120px;
 height:150px;
-object-fit:cover;
 border-radius:22px;
+object-fit:cover;
 }
 
 .product-title{
 font-size:22px;
 line-height:1.3;
+margin-bottom:12px;
 font-weight:500;
-margin-bottom:14px;
 }
 
 .product-meta{
@@ -480,11 +501,13 @@ color:#666;
 }
 
 .main-price{
-font-size:64px;
+font-size:60px;
 font-weight:700;
 letter-spacing:-2px;
-margin-top:12px;
+margin-top:10px;
 }
+
+/* SHIPPING */
 
 .shipping-select-row{
 padding:24px 0;
@@ -501,7 +524,7 @@ margin-bottom:14px;
 
 .shipping-countries{
 font-size:13px;
-line-height:2;
+line-height:1.9;
 color:#777;
 margin-bottom:18px;
 }
@@ -516,6 +539,8 @@ font-size:16px;
 background:#faf8f5;
 outline:none;
 }
+
+/* TOTALS */
 
 .summary-row{
 display:flex;
@@ -547,6 +572,8 @@ color:#666;
 max-width:180px;
 }
 
+/* BUTTON */
+
 .checkout-btn{
 width:100%;
 height:82px;
@@ -558,6 +585,8 @@ font-size:18px;
 letter-spacing:3px;
 margin-top:30px;
 }
+
+/* SECURITY */
 
 .security-box{
 margin-top:24px;
