@@ -228,9 +228,7 @@ prices:{
 ssdwaterwaveburgundy:{
 title:"SSD Waterwave Burgundy Wig",
 type:"Luxury Colored Wig",
-lace:[
-"13x6 HD"
-],
+lace:["13x6 HD"],
 image:"images/wig2.jpg",
 description:"Luxury SSD burgundy waterwave wig.",
 prices:{
@@ -252,9 +250,7 @@ prices:{
 ssdwaterwavebrownhighlight:{
 title:"SSD Waterwave Brown Highlight Wig",
 type:"Luxury Highlight Wig",
-lace:[
-"13x6 HD"
-],
+lace:["13x6 HD"],
 image:"images/home.jpg",
 description:"Luxury SSD brown highlight waterwave wig.",
 prices:{
@@ -278,9 +274,7 @@ prices:{
 blondehighlight:{
 title:"Blonde Highlight Wig",
 type:"Luxury Blonde Highlight Wig",
-lace:[
-"13x4 Lace"
-],
+lace:["13x4 Lace"],
 image:"images/wig1.jpg",
 description:"Luxury blonde highlight wig.",
 prices:{
@@ -436,11 +430,16 @@ product.description;
 document.getElementById("product-image").src =
 product.image;
 
+const laceGroup =
+document.getElementById("lace-group");
+
 const laceSelect =
 document.getElementById("lace-select");
 
 const lengthSelect =
 document.getElementById("length-select");
+
+laceGroup.style.display = "block";
 
 laceSelect.innerHTML = "";
 lengthSelect.innerHTML = "";
