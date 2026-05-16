@@ -15,216 +15,87 @@
 
 <link rel="stylesheet" href="style.css">
 
-<style>
-
-.cart-page{
-  padding:30px 16px 80px;
-}
-
-.cart-title{
-  font-size:42px;
-  font-family:'Cormorant Garamond',serif;
-  margin-bottom:30px;
-}
-
-.cart-layout{
-  display:grid;
-  gap:20px;
-}
-
-.cart-item{
-  background:white;
-  border-radius:20px;
-  padding:14px;
-  display:flex;
-  gap:14px;
-  align-items:center;
-}
-
-.cart-item img{
-  width:95px;
-  height:115px;
-  object-fit:cover;
-  border-radius:14px;
-}
-
-.cart-info{
-  flex:1;
-}
-
-.cart-info h3{
-  font-size:16px;
-  margin-bottom:6px;
-}
-
-.cart-info p{
-  font-size:13px;
-  color:#777;
-  margin-bottom:10px;
-}
-
-.cart-price{
-  font-size:16px;
-  color:#7b5d47;
-  font-weight:600;
-}
-
-.remove-btn{
-  margin-top:10px;
-  background:none;
-  color:#999;
-  font-size:12px;
-}
-
-.cart-summary{
-  background:white;
-  border-radius:20px;
-  padding:22px;
-}
-
-.summary-row{
-  display:flex;
-  justify-content:space-between;
-  margin-bottom:16px;
-  font-size:14px;
-}
-
-.summary-total{
-  font-size:22px;
-  font-weight:700;
-}
-
-.checkout-btn{
-  width:100%;
-  padding:16px;
-  border-radius:999px;
-  background:#111;
-  color:white;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:11px;
-  margin-top:20px;
-}
-
-@media(min-width:769px){
-
-  .cart-page{
-    max-width:1400px;
-    margin:auto;
-    padding:50px 20px 100px;
-  }
-
-  .cart-layout{
-    grid-template-columns:1fr 420px;
-    align-items:start;
-  }
-
-}
-
-</style>
-
 </head>
 
 <body>
 
-<header class="shop-header">
+<div class="cart-overlay">
 
-  <div class="shop-header-inner">
+<div class="cart-drawer">
 
-    <a href="index.html" class="brand">
+<div class="cart-top">
 
-      <span class="brand-main">
-        Caviar Curls
-      </span>
+<div class="cart-heading">
+CART <span>(1 ITEM)</span>
+</div>
 
-      <span class="brand-sub">
-        PREMIUM LUXURY HAIR
-      </span>
-
-    </a>
-
-    <div class="shop-icons">
-
-      <button class="menu-toggle">
-        ☰
-      </button>
-
-      <a href="cart.html">
-        👜
-      </a>
-
-    </div>
-
-  </div>
-
-</header>
-
-<div class="mobile-menu">
-
-  <a href="index.html">
-    Home
-  </a>
-
-  <a href="wigs.html">
-    Wigs
-  </a>
-
-  <a href="bundles.html">
-    Bundles
-  </a>
-
-  <a href="frontals.html">
-    Frontals
-  </a>
-
-  <a href="cart.html">
-    Cart
-  </a>
+<a href="index.html" class="close-cart">
+✕
+</a>
 
 </div>
 
-<section class="cart-page">
+<div class="drawer-items">
 
-  <h1 class="cart-title">
-    Your Cart
-  </h1>
+<div class="drawer-item">
 
-  <div class="cart-layout">
+<img src="images/wig1.jpg">
 
-    <div class="cart-items">
+<div class="drawer-info">
 
-    </div>
+<h3>Straight Cambodian Wig</h3>
 
-    <div class="cart-summary">
+<p>Type: 13x4 Frontal</p>
+<p>Length: 16"</p>
 
-      <div class="summary-row">
-        <span>Subtotal</span>
-        <span class="subtotal-price">£0</span>
-      </div>
+<div class="drawer-price">
+£100.00
+</div>
 
-      <div class="summary-row">
-        <span>Shipping</span>
-        <span>FREE</span>
-      </div>
+<div class="qty-wrap">
 
-      <div class="summary-row summary-total">
-        <span>Total</span>
-        <span class="total-price">£0</span>
-      </div>
+<button>-</button>
 
-      <a href="checkout.html">
-        <button class="checkout-btn">
-          Secure Checkout
-        </button>
-      </a>
+<span>1</span>
 
-    </div>
+<button>+</button>
 
-  </div>
+</div>
 
-</section>
+</div>
 
-<script src="app.js"></script>
+</div>
+
+</div>
+
+<div class="drawer-summary">
+
+<div class="summary-line">
+<span>Subtotal</span>
+<span>£100.00</span>
+</div>
+
+<div class="summary-line">
+<span>Shipping</span>
+<span>Calculated at checkout</span>
+</div>
+
+<div class="summary-total">
+<span>Total</span>
+<span>£100.00</span>
+</div>
+
+<a href="checkout.html">
+<button class="drawer-checkout">
+CHECK OUT
+</button>
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
