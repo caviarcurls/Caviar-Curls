@@ -407,7 +407,7 @@ BUNDLES
 ========================= */
 
 straightbundles:{
-title:"Straight Bundles",
+title:"Straight Bundles 14A",
 type:"Luxury Cambodian Bundles",
 lace:[
 "1 Bundle",
@@ -483,8 +483,37 @@ prices:{
 }
 },
 
+rawstraightbundles:{
+title:"RAW Straight Bundles",
+type:"Luxury RAW Bundles",
+lace:[
+"1 Bundle",
+"2 Bundles",
+"3 Bundles",
+"4 Bundles",
+"5 Bundles"
+],
+image:"images/wig1.jpg",
+description:"Luxury RAW straight bundles.",
+prices:{
+
+"1 Bundle":{
+"14":45,
+"16":55,
+"18":65,
+"20":75,
+"22":85,
+"24":95,
+"26":105,
+"28":115,
+"30":125
+}
+
+}
+},
+
 bodywavebundles:{
-title:"Body Wave Bundles",
+title:"Body Wave Bundles 14A",
 type:"Luxury Cambodian Bundles",
 lace:[
 "1 Bundle",
@@ -507,139 +536,14 @@ prices:{
 "26":100,
 "28":110,
 "30":120
-},
-
-"2 Bundles":{
-"14":80,
-"16":100,
-"18":120,
-"20":140,
-"22":160,
-"24":180,
-"26":200,
-"28":220,
-"30":240
-},
-
-"3 Bundles":{
-"14":120,
-"16":150,
-"18":180,
-"20":210,
-"22":240,
-"24":270,
-"26":300,
-"28":330,
-"30":360
-},
-
-"4 Bundles":{
-"14":160,
-"16":200,
-"18":240,
-"20":280,
-"22":320,
-"24":360,
-"26":400,
-"28":440,
-"30":480
-},
-
-"5 Bundles":{
-"14":200,
-"16":250,
-"18":300,
-"20":350,
-"22":400,
-"24":450,
-"26":500,
-"28":550,
-"30":600
 }
 
 }
 },
 
-deepwavebundles:{
-title:"Deep Wave Bundles",
-type:"Luxury Cambodian Bundles",
-lace:[
-"1 Bundle",
-"2 Bundles",
-"3 Bundles",
-"4 Bundles",
-"5 Bundles"
-],
-image:"images/wig1.jpg",
-description:"Luxury deep wave bundles.",
-prices:{
-
-"1 Bundle":{
-"14":42,
-"16":52,
-"18":62,
-"20":72,
-"22":82,
-"24":92,
-"26":102,
-"28":112,
-"30":122
-},
-
-"2 Bundles":{
-"14":84,
-"16":104,
-"18":124,
-"20":144,
-"22":164,
-"24":184,
-"26":204,
-"28":224,
-"30":244
-},
-
-"3 Bundles":{
-"14":126,
-"16":156,
-"18":186,
-"20":216,
-"22":246,
-"24":276,
-"26":306,
-"28":336,
-"30":366
-},
-
-"4 Bundles":{
-"14":168,
-"16":208,
-"18":248,
-"20":288,
-"22":328,
-"24":368,
-"26":408,
-"28":448,
-"30":488
-},
-
-"5 Bundles":{
-"14":210,
-"16":260,
-"18":310,
-"20":360,
-"22":410,
-"24":460,
-"26":510,
-"28":560,
-"30":610
-}
-
-}
-},
-
-waterwavebundles:{
-title:"Water Wave Bundles",
-type:"Luxury Cambodian Bundles",
+rawbodywavebundles:{
+title:"RAW Body Wave Bundles",
+type:"Luxury RAW Bundles",
 lace:[
 "1 Bundle",
 "2 Bundles",
@@ -648,67 +552,19 @@ lace:[
 "5 Bundles"
 ],
 image:"images/wig2.jpg",
-description:"Luxury water wave bundles.",
+description:"Luxury RAW body wave bundles.",
 prices:{
 
 "1 Bundle":{
-"14":45,
-"16":55,
-"18":65,
-"20":75,
-"22":85,
-"24":95,
-"26":105,
-"28":115,
-"30":125
-},
-
-"2 Bundles":{
-"14":90,
-"16":110,
-"18":130,
-"20":150,
-"22":170,
-"24":190,
-"26":210,
-"28":230,
-"30":250
-},
-
-"3 Bundles":{
-"14":135,
-"16":165,
-"18":195,
-"20":225,
-"22":255,
-"24":285,
-"26":315,
-"28":345,
-"30":375
-},
-
-"4 Bundles":{
-"14":180,
-"16":220,
-"18":260,
-"20":300,
-"22":340,
-"24":380,
-"26":420,
-"28":460,
-"30":500
-},
-
-"5 Bundles":{
-"14":225,
-"16":275,
-"18":325,
-"20":375,
-"22":425,
-"24":475,
-"26":525,
-"28":575,
-"30":625
+"14":48,
+"16":58,
+"18":68,
+"20":78,
+"22":88,
+"24":98,
+"26":108,
+"28":118,
+"30":128
 }
 
 }
