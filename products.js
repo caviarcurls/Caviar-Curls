@@ -409,12 +409,12 @@ BUNDLES
 straightbundles:{
 title:"Straight Bundles",
 type:"Luxury Cambodian Bundles",
-lace:["3 Bundles"],
+lace:["1 Bundle"],
 image:"images/Straight Cambodian Virgin hair.jpg",
 description:"Luxury straight bundles.",
 prices:{
 
-"3 Bundles":{
+"1 Bundle":{
 "14":38,
 "16":48,
 "18":58,
@@ -432,12 +432,12 @@ prices:{
 bodywavebundles:{
 title:"Body Wave Bundles",
 type:"Luxury Cambodian Bundles",
-lace:["3 Bundles"],
+lace:["1 Bundle"],
 image:"images/Body wave Cambodian virgin hair.jpg",
 description:"Luxury body wave bundles.",
 prices:{
 
-"3 Bundles":{
+"1 Bundle":{
 "14":40,
 "16":50,
 "18":60,
@@ -455,12 +455,12 @@ prices:{
 deepwavebundles:{
 title:"Deep Wave Bundles",
 type:"Luxury Cambodian Bundles",
-lace:["3 Bundles"],
+lace:["1 Bundle"],
 image:"images/wig1.jpg",
 description:"Luxury deep wave bundles.",
 prices:{
 
-"3 Bundles":{
+"1 Bundle":{
 "14":42,
 "16":52,
 "18":62,
@@ -478,12 +478,12 @@ prices:{
 waterwavebundles:{
 title:"Water Wave Bundles",
 type:"Luxury Cambodian Bundles",
-lace:["3 Bundles"],
+lace:["1 Bundle"],
 image:"images/wig2.jpg",
 description:"Luxury water wave bundles.",
 prices:{
 
-"3 Bundles":{
+"1 Bundle":{
 "14":45,
 "16":55,
 "18":65,
