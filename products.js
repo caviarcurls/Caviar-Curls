@@ -351,6 +351,58 @@ prices: {
 }
 
 }
+},
+
+bobblack: {
+title: "Vietnamese Bobs Black",
+type: "Luxury Bob Wig",
+lace: [
+"13x6 HD",
+"5x5 HD"
+],
+image: "images/home.jpg",
+description: "Luxury black bob wig.",
+prices: {
+
+"13x6 HD": {
+"8": 185,
+"10": 195,
+"12": 205
+},
+
+"5x5 HD": {
+"8": 165,
+"10": 175,
+"12": 185
+}
+
+}
+},
+
+bobblonde: {
+title: "Vietnamese Bobs Blonde",
+type: "Luxury Blonde Bob Wig",
+lace: [
+"13x6 HD",
+"5x5 HD"
+],
+image: "images/wig1.jpg",
+description: "Luxury blonde bob wig.",
+prices: {
+
+"13x6 HD": {
+"8": 210,
+"10": 220,
+"12": 230
+},
+
+"5x5 HD": {
+"8": 190,
+"10": 200,
+"12": 210
+}
+
+}
 }
 
 };
@@ -393,6 +445,8 @@ document.getElementById("length-select");
 laceSelect.innerHTML = "";
 lengthSelect.innerHTML = "";
 
+if(product.lace){
+
 product.lace.forEach(lace => {
 
 const option =
@@ -406,6 +460,8 @@ laceSelect.appendChild(option);
 
 });
 
+}
+
 function populateLengths(){
 
 lengthSelect.innerHTML = "";
@@ -413,10 +469,13 @@ lengthSelect.innerHTML = "";
 const selectedLace =
 laceSelect.value;
 
-const lengths =
-Object.keys(product.prices[selectedLace]);
+if(
+typeof product.prices[selectedLace] === "object"
+){
 
-lengths.forEach(length => {
+Object.keys(
+product.prices[selectedLace]
+).forEach(length => {
 
 const option =
 document.createElement("option");
@@ -428,6 +487,23 @@ option.textContent = `${length}"`;
 lengthSelect.appendChild(option);
 
 });
+
+}else{
+
+Object.keys(product.prices).forEach(length => {
+
+const option =
+document.createElement("option");
+
+option.value = length;
+
+option.textContent = `${length}"`;
+
+lengthSelect.appendChild(option);
+
+});
+
+}
 
 updatePrice();
 
@@ -441,8 +517,24 @@ laceSelect.value;
 const selectedLength =
 lengthSelect.value;
 
+let finalPrice;
+
+if(
+typeof product.prices[selectedLace] === "object"
+){
+
+finalPrice =
+product.prices[selectedLace][selectedLength];
+
+}else{
+
+finalPrice =
+product.prices[selectedLength];
+
+}
+
 document.getElementById("product-price").innerText =
-`£${product.prices[selectedLace][selectedLength]}`;
+`£${finalPrice}`;
 
 }
 
