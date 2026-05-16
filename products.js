@@ -1,94 +1,12 @@
 const products = {
 
-/* BUNDLES */
-
-straight14a: {
-title: "Straight Bundles Grade 14A",
-type: "Hair Bundles",
-image: "images/Straight Cambodian Virgin hair.jpg",
-description: "Luxury straight bundles with silky finish and premium quality.",
-prices: {
-"14": 38,
-"16": 46,
-"18": 56,
-"20": 65,
-"22": 75,
-"24": 84,
-"26": 90,
-"28": 100,
-"30": 110,
-"32": 120
-}
-},
-
-straightraw: {
-title: "Straight Bundles Raw Hair",
-type: "Raw Hair Bundles",
-image: "images/wig1.jpg",
-description: "Premium RAW straight bundles with luxury softness.",
-prices: {
-"14": 45,
-"16": 50,
-"18": 60,
-"20": 70,
-"22": 80,
-"24": 90,
-"26": 100,
-"28": 110,
-"30": 120,
-"32": 130
-}
-},
-
-bodywave14a: {
-title: "Body Wave Bundles Grade 14A",
-type: "Hair Bundles",
-image: "images/Body wave Cambodian virgin hair.jpg",
-description: "Soft luxury body wave bundles with premium bounce.",
-prices: {
-"14": 38,
-"16": 46,
-"18": 56,
-"20": 65,
-"22": 75,
-"24": 84,
-"26": 90,
-"28": 100,
-"30": 110,
-"32": 120
-}
-},
-
-bodywaveraw: {
-title: "Body Wave Bundles Raw Hair",
-type: "Raw Hair Bundles",
-image: "images/home.jpg",
-description: "Luxury RAW body wave bundles with flawless texture.",
-prices: {
-"14": 45,
-"16": 50,
-"18": 60,
-"20": 70,
-"22": 80,
-"24": 90,
-"26": 100,
-"28": 110,
-"30": 120,
-"32": 130
-}
-},
-
-/* CAMBODIAN VIRGIN WIGS */
+/* CAMBODIAN WIGS */
 
 straightwig: {
 title: "Straight Cambodian Wig",
 type: "13x4 HD Lace Frontal Wig",
 density: "250% Density",
-lace: [
-"5x5 Closure",
-"13x4 Frontal",
-"13x6 Frontal"
-],
+lace: ["13x4 Frontal"],
 image: "images/Straight Cambodian Virgin hair.jpg",
 description: "Luxury Cambodian straight wig with HD lace finish.",
 prices: {
@@ -107,11 +25,7 @@ bodywavewig: {
 title: "Body Wave Cambodian Wig",
 type: "13x4 HD Lace Frontal Wig",
 density: "250% Density",
-lace: [
-"5x5 Closure",
-"13x4 Frontal",
-"13x6 Frontal"
-],
+lace: ["13x4 Frontal"],
 image: "images/Body wave Cambodian virgin hair.jpg",
 description: "Luxury Cambodian body wave wig with premium softness.",
 prices: {
@@ -130,11 +44,7 @@ deepwavewig: {
 title: "Deep Wave Cambodian Wig",
 type: "13x4 HD Lace Frontal Wig",
 density: "250% Density",
-lace: [
-"5x5 Closure",
-"13x4 Frontal",
-"13x6 Frontal"
-],
+lace: ["13x4 Frontal"],
 image: "images/wig1.jpg",
 description: "Luxury Cambodian deep wave wig with premium curls.",
 prices: {
@@ -153,11 +63,7 @@ loosewavewig: {
 title: "Loose Wave Cambodian Wig",
 type: "13x4 HD Lace Frontal Wig",
 density: "250% Density",
-lace: [
-"5x5 Closure",
-"13x4 Frontal",
-"13x6 Frontal"
-],
+lace: ["13x4 Frontal"],
 image: "images/home.jpg",
 description: "Luxury Cambodian loose wave wig with flowing texture.",
 prices: {
@@ -176,11 +82,7 @@ waterwavewig: {
 title: "Water Wave Cambodian Wig",
 type: "13x4 HD Lace Frontal Wig",
 density: "250% Density",
-lace: [
-"5x5 Closure",
-"13x4 Frontal",
-"13x6 Frontal"
-],
+lace: ["13x4 Frontal"],
 image: "images/wig2.jpg",
 description: "Luxury Cambodian water wave wig with defined curls.",
 prices: {
@@ -201,32 +103,32 @@ rawvietnamese: {
 title: "RAW Vietnamese Wig",
 type: "RAW Vietnamese Hair",
 lace: [
-"5x5 Closure",
-"13x4 Frontal",
-"2x6 Closure"
+"13x4 HD",
+"5x5 HD",
+"2x6 HD"
 ],
 image: "images/wig1.jpg",
 description: "Luxury RAW Vietnamese wig with premium fullness.",
 prices: {
-"16": 180,
-"18": 195,
 "20": 210,
 "22": 225,
 "24": 240,
 "26": 255,
 "28": 270,
-"30": 285
+"30": 285,
+"32": 300,
+"34": 315
 }
 },
 
-/* SSD COLLECTION */
+/* SSD BODYWAVE */
 
 ssdbrownbodywave: {
 title: "SSD Brown Body Wave Wig",
 type: "Luxury Colored Wig",
 lace: [
-"5x5 Closure",
-"13x4 Frontal"
+"13x6 HD",
+"5x5 HD"
 ],
 image: "images/wig2.jpg",
 description: "Luxury SSD brown body wave wig with premium softness.",
@@ -244,8 +146,8 @@ ssdbalayagebodywave: {
 title: "SSD Balayage Body Wave Wig",
 type: "Luxury Colored Wig",
 lace: [
-"5x5 Closure",
-"13x4 Frontal"
+"13x6 HD",
+"5x5 HD"
 ],
 image: "images/home.jpg",
 description: "Luxury SSD balayage body wave wig.",
@@ -259,12 +161,13 @@ prices: {
 }
 },
 
+/* SSD WATERWAVE */
+
 ssdwaterwaveburgundy: {
 title: "SSD Waterwave Burgundy Wig",
 type: "Luxury Colored Wig",
 lace: [
-"5x5 Closure",
-"13x4 Frontal"
+"13x6 HD"
 ],
 image: "images/wig2.jpg",
 description: "Luxury SSD burgundy waterwave wig.",
@@ -274,7 +177,9 @@ prices: {
 "20": 250,
 "22": 265,
 "24": 280,
-"26": 295
+"26": 295,
+"28": 310,
+"30": 325
 }
 },
 
@@ -282,8 +187,7 @@ ssdwaterwavebrownhighlight: {
 title: "SSD Waterwave Brown Highlight Wig",
 type: "Luxury Highlight Wig",
 lace: [
-"5x5 Closure",
-"13x4 Frontal"
+"13x6 HD"
 ],
 image: "images/home.jpg",
 description: "Luxury brown highlight waterwave wig.",
@@ -293,16 +197,19 @@ prices: {
 "20": 260,
 "22": 275,
 "24": 290,
-"26": 305
+"26": 305,
+"28": 320,
+"30": 335
 }
 },
+
+/* BLONDE HIGHLIGHT */
 
 blondehighlight: {
 title: "Blonde Highlight Wig",
 type: "Luxury Blonde Highlight Wig",
 lace: [
-"5x5 Closure",
-"13x4 Frontal"
+"13x4 Lace"
 ],
 image: "images/wig1.jpg",
 description: "Luxury blonde highlight wig with premium softness.",
@@ -312,25 +219,27 @@ prices: {
 "20": 270,
 "22": 285,
 "24": 300,
-"26": 315
+"26": 315,
+"28": 330,
+"30": 345
 }
 },
 
-/* BOBS */
+/* VIETNAMESE BOBS */
 
 bobburgundy: {
 title: "Vietnamese Bobs Burgundy",
 type: "Luxury Bob Wig",
 lace: [
-"5x5 Closure",
-"13x4 Frontal"
+"13x6 HD",
+"5x5 HD"
 ],
 image: "images/wig1.jpg",
 description: "Luxury burgundy Vietnamese bob.",
 prices: {
-"10": 170,
-"12": 180,
-"14": 190
+"8": 170,
+"10": 180,
+"12": 190
 }
 },
 
@@ -338,15 +247,15 @@ bobbrown: {
 title: "Vietnamese Bobs Brown",
 type: "Luxury Bob Wig",
 lace: [
-"5x5 Closure",
-"13x4 Frontal"
+"13x6 HD",
+"5x5 HD"
 ],
 image: "images/wig2.jpg",
 description: "Luxury brown Vietnamese bob.",
 prices: {
-"10": 175,
-"12": 185,
-"14": 195
+"8": 175,
+"10": 185,
+"12": 195
 }
 },
 
@@ -354,15 +263,15 @@ bobblack: {
 title: "Vietnamese Bobs Black",
 type: "Luxury Bob Wig",
 lace: [
-"5x5 Closure",
-"13x4 Frontal"
+"13x6 HD",
+"5x5 HD"
 ],
 image: "images/home.jpg",
 description: "Luxury black Vietnamese bob.",
 prices: {
-"10": 165,
-"12": 175,
-"14": 185
+"8": 165,
+"10": 175,
+"12": 185
 }
 },
 
@@ -370,15 +279,15 @@ bobblonde: {
 title: "Vietnamese Bobs Blonde",
 type: "Luxury Blonde Bob Wig",
 lace: [
-"5x5 Closure",
-"13x4 Frontal"
+"13x6 HD",
+"5x5 HD"
 ],
 image: "images/wig1.jpg",
 description: "Luxury blonde Vietnamese bob.",
 prices: {
-"10": 190,
-"12": 200,
-"14": 210
+"8": 190,
+"10": 200,
+"12": 210
 }
 }
 
