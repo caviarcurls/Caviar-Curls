@@ -1,6 +1,6 @@
 const products = {
 
-/* CAMBODIAN */
+/* CAMBODIAN WIGS */
 
 straightwig:{
 title:"Straight Cambodian Wig",
@@ -127,9 +127,7 @@ prices:{
 "24":260,
 "26":275,
 "28":290,
-"30":305,
-"32":320,
-"34":335
+"30":305
 },
 
 "5x5 HD":{
@@ -138,9 +136,7 @@ prices:{
 "24":240,
 "26":255,
 "28":270,
-"30":285,
-"32":300,
-"34":315
+"30":285
 },
 
 "2x6 HD":{
@@ -149,9 +145,7 @@ prices:{
 "24":250,
 "26":265,
 "28":280,
-"30":295,
-"32":310,
-"34":325
+"30":295
 }
 
 }
@@ -397,6 +391,170 @@ prices:{
 }
 
 }
+},
+
+/* BUNDLES */
+
+straightbundles:{
+title:"Straight Bundles",
+type:"Luxury Cambodian Bundles",
+lace:["3 Bundles"],
+image:"images/Straight Cambodian Virgin hair.jpg",
+description:"Luxury straight bundles.",
+prices:{
+"3 Bundles":{
+"16":85,
+"18":95,
+"20":105,
+"22":115,
+"24":125,
+"26":135,
+"28":145,
+"30":155
+}
+}
+},
+
+bodywavebundles:{
+title:"Body Wave Bundles",
+type:"Luxury Cambodian Bundles",
+lace:["3 Bundles"],
+image:"images/Body wave Cambodian virgin hair.jpg",
+description:"Luxury body wave bundles.",
+prices:{
+"3 Bundles":{
+"16":90,
+"18":100,
+"20":110,
+"22":120,
+"24":130,
+"26":140,
+"28":150,
+"30":160
+}
+}
+},
+
+deepwavebundles:{
+title:"Deep Wave Bundles",
+type:"Luxury Cambodian Bundles",
+lace:["3 Bundles"],
+image:"images/wig1.jpg",
+description:"Luxury deep wave bundles.",
+prices:{
+"3 Bundles":{
+"16":95,
+"18":105,
+"20":115,
+"22":125,
+"24":135,
+"26":145,
+"28":155,
+"30":165
+}
+}
+},
+
+waterwavebundles:{
+title:"Water Wave Bundles",
+type:"Luxury Cambodian Bundles",
+lace:["3 Bundles"],
+image:"images/wig2.jpg",
+description:"Luxury water wave bundles.",
+prices:{
+"3 Bundles":{
+"16":100,
+"18":110,
+"20":120,
+"22":130,
+"24":140,
+"26":150,
+"28":160,
+"30":170
+}
+}
+},
+
+/* FRONTALS */
+
+hd13x4frontal:{
+title:"13x4 HD Frontal",
+type:"HD Lace Frontal",
+lace:["13x4 HD"],
+image:"images/wig1.jpg",
+description:"Luxury HD frontal.",
+prices:{
+"13x4 HD":{
+"14":85,
+"16":95,
+"18":105,
+"20":115
+}
+}
+},
+
+hd13x6frontal:{
+title:"13x6 HD Frontal",
+type:"HD Lace Frontal",
+lace:["13x6 HD"],
+image:"images/wig2.jpg",
+description:"Luxury HD frontal.",
+prices:{
+"13x6 HD":{
+"14":95,
+"16":105,
+"18":115,
+"20":125
+}
+}
+},
+
+hd5x5closure:{
+title:"5x5 HD Closure",
+type:"HD Lace Closure",
+lace:["5x5 HD"],
+image:"images/home.jpg",
+description:"Luxury HD closure.",
+prices:{
+"5x5 HD":{
+"14":75,
+"16":85,
+"18":95,
+"20":105
+}
+}
+},
+
+hd6x6closure:{
+title:"6x6 HD Closure",
+type:"HD Lace Closure",
+lace:["6x6 HD"],
+image:"images/wig1.jpg",
+description:"Luxury HD closure.",
+prices:{
+"6x6 HD":{
+"14":80,
+"16":90,
+"18":100,
+"20":110
+}
+}
+},
+
+hd2x6closure:{
+title:"2x6 HD Closure",
+type:"HD Lace Closure",
+lace:["2x6 HD"],
+image:"images/wig2.jpg",
+description:"Luxury HD closure.",
+prices:{
+"2x6 HD":{
+"14":70,
+"16":80,
+"18":90,
+"20":100
+}
+}
 }
 
 };
@@ -430,16 +588,11 @@ product.description;
 document.getElementById("product-image").src =
 product.image;
 
-const laceGroup =
-document.getElementById("lace-group");
-
 const laceSelect =
 document.getElementById("lace-select");
 
 const lengthSelect =
 document.getElementById("length-select");
-
-laceGroup.style.display = "block";
 
 laceSelect.innerHTML = "";
 lengthSelect.innerHTML = "";
