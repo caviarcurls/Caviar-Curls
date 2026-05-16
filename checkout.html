@@ -240,25 +240,6 @@ opacity:0.72;
 line-height:2;
 }
 
-/* QTY */
-
-.qty-row{
-display:flex;
-align-items:center;
-gap:14px;
-margin:18px 0;
-}
-
-.qty-btn{
-width:34px;
-height:34px;
-border:none;
-border-radius:999px;
-background:#f3f0eb;
-font-size:22px;
-cursor:pointer;
-}
-
 /* PRICE */
 
 .price-line{
@@ -273,15 +254,38 @@ font-weight:700;
 letter-spacing:-1px;
 }
 
-/* NOTES */
+/* SHIPPING */
 
-.notes-row{
-padding:18px 0;
+.shipping-select-row{
+display:block;
+padding:20px 0;
 border-top:1px solid rgba(0,0,0,0.06);
 border-bottom:1px solid rgba(0,0,0,0.06);
-display:flex;
-justify-content:space-between;
-margin-bottom:18px;
+margin-bottom:20px;
+}
+
+.shipping-title{
+font-size:15px;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.shipping-countries{
+font-size:12px;
+line-height:1.7;
+opacity:0.55;
+margin-bottom:14px;
+}
+
+#shipping-select{
+width:100%;
+height:56px;
+border-radius:16px;
+border:1px solid rgba(0,0,0,0.08);
+padding:0 16px;
+font-size:14px;
+background:#faf8f5;
+outline:none;
 }
 
 /* TOTALS */
@@ -304,25 +308,14 @@ align-items:flex-end;
 font-size:52px;
 }
 
-/* BUTTONS */
-
-.cart-btn{
-width:100%;
-height:66px;
-border-radius:999px;
-background:white;
-border:1px solid #111;
-font-size:16px;
-margin-top:24px;
-cursor:pointer;
-}
+/* BUTTON */
 
 .checkout-btn{
 width:100%;
 height:68px;
 border:none;
 border-radius:999px;
-margin-top:14px;
+margin-top:24px;
 background:
 linear-gradient(
 135deg,
@@ -332,62 +325,6 @@ linear-gradient(
 color:white;
 font-size:16px;
 cursor:pointer;
-}
-
-/* FEATURES */
-
-.features{
-margin-top:38px;
-background:white;
-border-radius:28px;
-padding:30px;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-box-shadow:
-0 10px 40px rgba(0,0,0,0.04);
-}
-
-.feature{
-text-align:center;
-font-size:14px;
-line-height:1.7;
-}
-
-/* FOOTER */
-
-.footer{
-margin-top:48px;
-background:#f1ebe3;
-padding:60px 20px;
-}
-
-.footer-grid{
-max-width:1480px;
-margin:auto;
-display:grid;
-grid-template-columns:2fr 1fr 1fr 1fr;
-gap:40px;
-}
-
-.footer h4{
-margin-bottom:18px;
-font-size:15px;
-}
-
-.footer a{
-display:block;
-margin-bottom:12px;
-text-decoration:none;
-color:#111;
-opacity:0.7;
-font-size:14px;
-}
-
-.footer-brand{
-font-family:'Cormorant Garamond',serif;
-font-size:54px;
-margin-bottom:12px;
 }
 
 /* MOBILE */
@@ -427,14 +364,6 @@ padding:24px;
 border-radius:26px;
 }
 
-.features{
-grid-template-columns:1fr 1fr;
-}
-
-.footer-grid{
-grid-template-columns:1fr;
-}
-
 .total h2{
 font-size:40px;
 }
@@ -448,7 +377,7 @@ font-size:40px;
 <body>
 
 <div class="top-bar">
-FREE WORLDWIDE SHIPPING ON ALL ORDERS ✧
+PREMIUM LUXURY HAIR ✧ WORLDWIDE SHIPPING
 </div>
 
 <header class="header">
@@ -466,7 +395,7 @@ PREMIUM LUXURY HAIR
 </a>
 
 <div class="header-icons">
-☰ 👤 👜
+☰ 👜
 </div>
 
 </header>
@@ -532,12 +461,13 @@ Shipping Information
 </div>
 
 <div>
+
 <strong>
 Your information is secure
 </strong>
 
 <p>
-We use industry-standard encryption to protect your personal details.
+We use encrypted checkout systems to protect your information.
 </p>
 
 </div>
@@ -584,22 +514,6 @@ Length:
 
 </div>
 
-<div class="qty-row">
-
-<button class="qty-btn">
-−
-</button>
-
-<span>
-1
-</span>
-
-<button class="qty-btn">
-+
-</button>
-
-</div>
-
 <div class="price-line">
 
 <div
@@ -615,14 +529,44 @@ id="checkout-total"
 
 </div>
 
-<div class="notes-row">
-<span>
-✎ Order notes
-</span>
+<!-- SHIPPING -->
 
-<span>
-+
-</span>
+<div class="shipping-select-row">
+
+<div class="shipping-title">
+Shipping Method
+</div>
+
+<div class="shipping-countries">
+
+International shipping available to:
+
+USA, Canada, France, Germany,
+Netherlands, Belgium, Ireland,
+Spain, Italy, Sweden, Switzerland,
+Norway, Denmark, Australia,
+New Zealand, UAE, Saudi Arabia,
+Qatar, Kuwait, Nigeria,
+South Africa
+
+</div>
+
+<select id="shipping-select">
+
+<option value="5.99">
+UK Standard — £5.99
+</option>
+
+<option value="11.99">
+UK Express — £11.99
+</option>
+
+<option value="38.99">
+International — £38.99
+</option>
+
+</select>
+
 </div>
 
 <div class="summary-row">
@@ -640,21 +584,23 @@ Subtotal
 Shipping
 </span>
 
-<span>
-FREE
+<span id="shipping-price">
+£5.99
 </span>
 </div>
 
 <div class="total">
 
 <div>
+
 <h2>
 Total
 </h2>
 
 <p>
-Taxes and shipping calculated at checkout
+Taxes calculated at checkout
 </p>
+
 </div>
 
 <h2 id="checkout-total-large">
@@ -662,10 +608,6 @@ Taxes and shipping calculated at checkout
 </h2>
 
 </div>
-
-<button class="cart-btn">
-GO TO CART
-</button>
 
 <button class="checkout-btn">
 CHECK OUT
@@ -675,107 +617,7 @@ CHECK OUT
 
 </div>
 
-<div class="features">
-
-<div class="feature">
-🛡️<br>
-Secure Checkout
-</div>
-
-<div class="feature">
-💰<br>
-Money Back Guarantee
-</div>
-
-<div class="feature">
-🚚<br>
-Fast & Reliable Shipping
-</div>
-
-<div class="feature">
-🎧<br>
-24/7 Customer Support
-</div>
-
-</div>
-
 </section>
-
-<footer class="footer">
-
-<div class="footer-grid">
-
-<div>
-
-<div class="footer-brand">
-Caviar Curls
-</div>
-
-<p>
-Luxury hair extensions crafted for beauty, confidence and timeless elegance.
-</p>
-
-</div>
-
-<div>
-
-<h4>
-SHOP
-</h4>
-
-<a href="wigs.html">
-Wigs
-</a>
-
-<a href="bundles.html">
-Bundles
-</a>
-
-<a href="frontals.html">
-Frontals
-</a>
-
-</div>
-
-<div>
-
-<h4>
-HELP
-</h4>
-
-<a href="help.html">
-Contact Us
-</a>
-
-<a href="shipping.html">
-Shipping Policy
-</a>
-
-<a href="returns.html">
-Refund Policy
-</a>
-
-</div>
-
-<div>
-
-<h4>
-INFORMATION
-</h4>
-
-<a href="privacy.html">
-Privacy Policy
-</a>
-
-<a href="terms.html">
-Terms of Service
-</a>
-
-</div>
-
-</div>
-
-</footer>
 
 <script>
 
@@ -784,7 +626,25 @@ JSON.parse(
 localStorage.getItem("checkoutProduct")
 );
 
+const shippingSelect =
+document.getElementById(
+"shipping-select"
+);
+
+function updateCheckout(){
+
 if(item){
+
+const subtotal =
+Number(item.price);
+
+const shipping =
+Number(
+shippingSelect.value
+);
+
+const total =
+subtotal + shipping;
 
 document.getElementById(
 "checkout-product"
@@ -804,17 +664,22 @@ item.length + '"';
 document.getElementById(
 "checkout-total"
 ).innerText =
-"£" + item.price;
-
-document.getElementById(
-"checkout-total-large"
-).innerText =
-"£" + item.price;
+"£" + subtotal.toFixed(2);
 
 document.getElementById(
 "checkout-subtotal"
 ).innerText =
-"£" + item.price;
+"£" + subtotal.toFixed(2);
+
+document.getElementById(
+"shipping-price"
+).innerText =
+"£" + shipping.toFixed(2);
+
+document.getElementById(
+"checkout-total-large"
+).innerText =
+"£" + total.toFixed(2);
 
 document.getElementById(
 "checkout-image"
@@ -822,6 +687,15 @@ document.getElementById(
 item.image;
 
 }
+
+}
+
+shippingSelect.addEventListener(
+"change",
+updateCheckout
+);
+
+updateCheckout();
 
 document.querySelector(
 ".checkout-btn"
