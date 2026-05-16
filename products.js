@@ -95,11 +95,11 @@ prices: {
 "16": 100,
 "18": 115,
 "20": 130,
-"22": 155,
-"24": 170,
-"26": 185,
-"28": 200,
-"30": 215
+"22": 145,
+"24": 160,
+"26": 175,
+"28": 190,
+"30": 205
 }
 },
 
@@ -115,77 +115,83 @@ lace: [
 image: "images/Body wave Cambodian virgin hair.jpg",
 description: "Luxury Cambodian body wave wig with premium softness.",
 prices: {
-"16": 100,
-"18": 115,
-"20": 130,
-"22": 155,
-"24": 170,
-"26": 185,
-"28": 200,
-"30": 215
+"16": 120,
+"18": 135,
+"20": 150,
+"22": 165,
+"24": 180,
+"26": 195,
+"28": 210,
+"30": 225
 }
 },
 
 deepwavewig: {
-title: "Deep Wave Wig",
-type: "Luxury Deep Wave Wig",
+title: "Deep Wave Cambodian Wig",
+type: "13x4 HD Lace Frontal Wig",
+density: "250% Density",
 lace: [
 "5x5 Closure",
-"13x4 Frontal"
+"13x4 Frontal",
+"13x6 Frontal"
 ],
 image: "images/wig1.jpg",
-description: "Luxury deep wave wig with soft premium curls.",
+description: "Luxury Cambodian deep wave wig with premium curls.",
 prices: {
-"16": 110,
-"18": 120,
-"20": 135,
-"22": 160,
-"24": 175,
-"26": 190,
-"28": 205,
-"30": 220
+"16": 130,
+"18": 145,
+"20": 160,
+"22": 175,
+"24": 190,
+"26": 205,
+"28": 220,
+"30": 235
 }
 },
 
 loosewavewig: {
-title: "Loose Wave Wig",
-type: "Luxury Loose Wave Wig",
+title: "Loose Wave Cambodian Wig",
+type: "13x4 HD Lace Frontal Wig",
+density: "250% Density",
 lace: [
 "5x5 Closure",
-"13x4 Frontal"
+"13x4 Frontal",
+"13x6 Frontal"
 ],
 image: "images/home.jpg",
-description: "Luxury loose wave wig with flowing texture.",
+description: "Luxury Cambodian loose wave wig with flowing texture.",
 prices: {
-"16": 110,
-"18": 120,
-"20": 135,
-"22": 160,
-"24": 175,
-"26": 190,
-"28": 205,
-"30": 220
+"16": 135,
+"18": 150,
+"20": 165,
+"22": 180,
+"24": 195,
+"26": 210,
+"28": 225,
+"30": 240
 }
 },
 
 waterwavewig: {
-title: "Water Wave Wig",
-type: "Luxury Water Wave Wig",
+title: "Water Wave Cambodian Wig",
+type: "13x4 HD Lace Frontal Wig",
+density: "250% Density",
 lace: [
 "5x5 Closure",
-"13x4 Frontal"
+"13x4 Frontal",
+"13x6 Frontal"
 ],
 image: "images/wig2.jpg",
-description: "Luxury water wave wig with defined curls.",
+description: "Luxury Cambodian water wave wig with defined curls.",
 prices: {
-"16": 110,
-"18": 120,
-"20": 135,
-"22": 160,
-"24": 175,
-"26": 190,
-"28": 205,
-"30": 220
+"16": 145,
+"18": 160,
+"20": 175,
+"22": 190,
+"24": 205,
+"26": 220,
+"28": 235,
+"30": 250
 }
 },
 
@@ -230,9 +236,7 @@ prices: {
 "20": 220,
 "22": 235,
 "24": 250,
-"26": 265,
-"28": 280,
-"30": 295
+"26": 265
 }
 },
 
@@ -251,9 +255,7 @@ prices: {
 "20": 240,
 "22": 255,
 "24": 270,
-"26": 285,
-"28": 300,
-"30": 315
+"26": 285
 }
 },
 
@@ -272,9 +274,7 @@ prices: {
 "20": 250,
 "22": 265,
 "24": 280,
-"26": 295,
-"28": 310,
-"30": 325
+"26": 295
 }
 },
 
@@ -293,9 +293,7 @@ prices: {
 "20": 260,
 "22": 275,
 "24": 290,
-"26": 305,
-"28": 320,
-"30": 335
+"26": 305
 }
 },
 
@@ -307,16 +305,14 @@ lace: [
 "13x4 Frontal"
 ],
 image: "images/wig1.jpg",
-description: "Luxury blonde highlight wig.",
+description: "Luxury blonde highlight wig with premium softness.",
 prices: {
 "16": 240,
 "18": 255,
 "20": 270,
 "22": 285,
 "24": 300,
-"26": 315,
-"28": 330,
-"30": 345
+"26": 315
 }
 },
 
@@ -332,10 +328,9 @@ lace: [
 image: "images/wig1.jpg",
 description: "Luxury burgundy Vietnamese bob.",
 prices: {
-"10": 140,
-"12": 150,
-"14": 160,
-"16": 170
+"10": 170,
+"12": 180,
+"14": 190
 }
 },
 
@@ -349,10 +344,9 @@ lace: [
 image: "images/wig2.jpg",
 description: "Luxury brown Vietnamese bob.",
 prices: {
-"10": 145,
-"12": 155,
-"14": 165,
-"16": 175
+"10": 175,
+"12": 185,
+"14": 195
 }
 },
 
@@ -366,10 +360,9 @@ lace: [
 image: "images/home.jpg",
 description: "Luxury black Vietnamese bob.",
 prices: {
-"10": 135,
-"12": 145,
-"14": 155,
-"16": 165
+"10": 165,
+"12": 175,
+"14": 185
 }
 },
 
@@ -383,10 +376,9 @@ lace: [
 image: "images/wig1.jpg",
 description: "Luxury blonde Vietnamese bob.",
 prices: {
-"10": 160,
-"12": 170,
-"14": 180,
-"16": 190
+"10": 190,
+"12": 200,
+"14": 210
 }
 }
 
@@ -421,8 +413,6 @@ product.description;
 document.getElementById("product-image").src =
 product.image;
 
-/* LENGTH */
-
 const lengthSelect =
 document.getElementById("length-select");
 
@@ -440,8 +430,6 @@ option.textContent = `${length}"`;
 lengthSelect.appendChild(option);
 
 });
-
-/* LACE */
 
 const laceGroup =
 document.getElementById("lace-group");
@@ -471,8 +459,6 @@ laceSelect.appendChild(option);
 });
 
 }
-
-/* PRICE */
 
 function updatePrice(){
 
