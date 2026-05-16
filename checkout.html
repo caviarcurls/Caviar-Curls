@@ -15,408 +15,80 @@ Checkout | Caviar Curls
 </title>
 
 <link
-rel="preconnect"
-href="https://fonts.googleapis.com"
->
-
-<link
-rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin
->
-
-<link
 href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
 rel="stylesheet"
 >
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-background:#f7f4ef;
-font-family:'Inter',sans-serif;
-color:#111;
-}
-
-/* TOP BAR */
-
-.top-bar{
-height:42px;
-background:#efe6da;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:12px;
-letter-spacing:1px;
-}
-
-/* HEADER */
-
-.header{
-height:92px;
-background:white;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 34px;
-border-bottom:1px solid rgba(0,0,0,0.06);
-}
-
-.brand{
-text-decoration:none;
-color:#111;
-}
-
-.brand h1{
-font-family:'Cormorant Garamond',serif;
-font-size:56px;
-font-weight:600;
-line-height:0.9;
-}
-
-.brand p{
-font-size:11px;
-letter-spacing:5px;
-margin-top:8px;
-opacity:0.6;
-}
-
-.header-icons{
-display:flex;
-gap:22px;
-font-size:24px;
-}
-
-/* PAGE */
-
-.checkout-page{
-max-width:1480px;
-margin:auto;
-padding:34px 20px 90px;
-}
-
-.breadcrumb{
-font-size:14px;
-opacity:0.55;
-margin-bottom:26px;
-}
-
-.checkout-title{
-font-size:84px;
-font-family:'Cormorant Garamond',serif;
-line-height:0.9;
-margin-bottom:14px;
-}
-
-.secure{
-display:flex;
-align-items:center;
-gap:8px;
-font-size:15px;
-opacity:0.7;
-margin-bottom:38px;
-}
-
-/* LAYOUT */
-
-.checkout-layout{
-display:grid;
-grid-template-columns:1fr 470px;
-gap:28px;
-align-items:start;
-}
-
-/* FORM */
-
-.checkout-form{
-background:white;
-border-radius:32px;
-padding:34px;
-box-shadow:
-0 10px 40px rgba(0,0,0,0.04);
-}
-
-.checkout-form h2{
-font-size:38px;
-margin-bottom:32px;
-}
-
-.form-group{
-margin-bottom:22px;
-}
-
-.form-group label{
-display:block;
-margin-bottom:10px;
-font-size:15px;
-font-weight:500;
-}
-
-.form-group input{
-width:100%;
-height:66px;
-padding:0 22px;
-border-radius:18px;
-border:1px solid rgba(0,0,0,0.08);
-background:#fcfbf9;
-font-size:15px;
-outline:none;
-transition:0.25s;
-}
-
-.form-group input:focus{
-border-color:#d6b08b;
-background:white;
-}
-
-/* SECURITY */
-
-.security-box{
-margin-top:24px;
-background:#faf6f1;
-padding:22px;
-border-radius:20px;
-display:flex;
-gap:14px;
-align-items:flex-start;
-}
-
-.security-box strong{
-display:block;
-margin-bottom:6px;
-}
-
-/* SUMMARY */
-
-.checkout-summary{
-background:white;
-border-radius:32px;
-padding:28px;
-box-shadow:
-0 10px 40px rgba(0,0,0,0.04);
-position:sticky;
-top:20px;
-}
-
-.checkout-summary h3{
-font-size:34px;
-margin-bottom:22px;
-}
-
-/* PRODUCT */
-
-.product-card{
-display:flex;
-gap:16px;
-margin-bottom:24px;
-}
-
-.product-card img{
-width:120px;
-height:150px;
-object-fit:cover;
-border-radius:18px;
-}
-
-.product-info{
-flex:1;
-}
-
-.product-title{
-font-size:18px;
-line-height:1.45;
-margin-bottom:16px;
-}
-
-.product-meta{
-font-size:14px;
-opacity:0.72;
-line-height:2;
-}
-
-/* PRICE */
-
-.price-line{
-display:flex;
-align-items:center;
-margin-bottom:22px;
-}
-
-.main-price{
-font-size:42px;
-font-weight:700;
-letter-spacing:-1px;
-}
-
-/* SHIPPING */
-
-.shipping-select-row{
-display:block;
-padding:20px 0;
-border-top:1px solid rgba(0,0,0,0.06);
-border-bottom:1px solid rgba(0,0,0,0.06);
-margin-bottom:20px;
-}
-
-.shipping-title{
-font-size:15px;
-font-weight:600;
-margin-bottom:10px;
-}
-
-.shipping-countries{
-font-size:12px;
-line-height:1.7;
-opacity:0.55;
-margin-bottom:14px;
-}
-
-#shipping-select{
-width:100%;
-height:56px;
-border-radius:16px;
-border:1px solid rgba(0,0,0,0.08);
-padding:0 16px;
-font-size:14px;
-background:#faf8f5;
-outline:none;
-}
-
-/* TOTALS */
-
-.summary-row{
-display:flex;
-justify-content:space-between;
-margin-bottom:14px;
-font-size:15px;
-}
-
-.total{
-margin-top:20px;
-display:flex;
-justify-content:space-between;
-align-items:flex-end;
-}
-
-.total h2{
-font-size:52px;
-}
-
-/* BUTTON */
-
-.checkout-btn{
-width:100%;
-height:68px;
-border:none;
-border-radius:999px;
-margin-top:24px;
-background:
-linear-gradient(
-135deg,
-#111,
-#000
-);
-color:white;
-font-size:16px;
-cursor:pointer;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.header{
-padding:0 18px;
-height:84px;
-}
-
-.brand h1{
-font-size:38px;
-}
-
-.checkout-page{
-padding:22px 14px 70px;
-}
-
-.checkout-title{
-font-size:64px;
-}
-
-.checkout-layout{
-grid-template-columns:1fr;
-}
-
-.checkout-form{
-padding:24px;
-border-radius:26px;
-}
-
-.checkout-summary{
-position:relative;
-top:0;
-padding:24px;
-border-radius:26px;
-}
-
-.total h2{
-font-size:40px;
-}
-
-}
-
-</style>
+<link
+rel="stylesheet"
+href="style.css"
+/>
 
 </head>
 
 <body>
 
-<div class="top-bar">
-PREMIUM LUXURY HAIR ✧ WORLDWIDE SHIPPING
-</div>
+<header class="shop-header">
 
-<header class="header">
+<div class="shop-header-inner">
 
 <a href="index.html" class="brand">
 
-<h1>
+<span class="brand-main">
 Caviar Curls
-</h1>
+</span>
 
-<p>
+<span class="brand-sub">
 PREMIUM LUXURY HAIR
-</p>
+</span>
 
 </a>
 
-<div class="header-icons">
-☰ 👜
+<div class="shop-icons">
+
+<button>
+☰
+</button>
+
+<a href="cart.html">
+👜
+</a>
+
 </div>
+
+</div>
+
+<nav class="mobile-menu">
+
+<a href="index.html">
+HOME
+</a>
+
+<a href="wigs.html">
+WIGS
+</a>
+
+<a href="bundles.html">
+BUNDLES
+</a>
+
+<a href="frontals.html">
+FRONTALS
+</a>
+
+<a href="cart.html">
+CART
+</a>
+
+</nav>
 
 </header>
 
 <section class="checkout-page">
 
-<div class="breadcrumb">
-Home > Cart > Checkout
-</div>
-
-<h1 class="checkout-title">
-Checkout
-</h1>
-
-<div class="secure">
-🔒 Secure checkout
-</div>
-
 <div class="checkout-layout">
 
-<!-- LEFT -->
+<!-- FORM -->
 
 <div class="checkout-form">
 
@@ -425,58 +97,92 @@ Shipping Information
 </h2>
 
 <div class="form-group">
-<label>Full Name</label>
-<input type="text" placeholder="Enter your full name">
+
+<label>
+Full Name
+</label>
+
+<input
+type="text"
+placeholder="Enter your full name"
+/>
+
 </div>
 
 <div class="form-group">
-<label>Email Address</label>
-<input type="email" placeholder="Enter your email">
+
+<label>
+Email Address
+</label>
+
+<input
+type="email"
+placeholder="Enter your email"
+/>
+
 </div>
 
 <div class="form-group">
-<label>Phone Number</label>
-<input type="tel" placeholder="Enter your phone number">
+
+<label>
+Phone Number
+</label>
+
+<input
+type="tel"
+placeholder="Enter your phone number"
+/>
+
 </div>
 
 <div class="form-group">
-<label>Address</label>
-<input type="text" placeholder="Enter your address">
+
+<label>
+Address
+</label>
+
+<input
+type="text"
+placeholder="Enter your address"
+/>
+
 </div>
 
 <div class="form-group">
-<label>City</label>
-<input type="text" placeholder="Enter your city">
+
+<label>
+City
+</label>
+
+<input
+type="text"
+placeholder="Enter your city"
+/>
+
 </div>
 
 <div class="form-group">
-<label>Postcode</label>
-<input type="text" placeholder="Enter your postcode">
+
+<label>
+Postcode
+</label>
+
+<input
+type="text"
+placeholder="Enter your postcode"
+/>
+
 </div>
 
 <div class="security-box">
 
-<div>
-🛡️
-</div>
-
-<div>
-
-<strong>
-Your information is secure
-</strong>
-
-<p>
-We use encrypted checkout systems to protect your information.
-</p>
+🛡️ Secure encrypted checkout
 
 </div>
 
 </div>
 
-</div>
-
-<!-- RIGHT -->
+<!-- SUMMARY -->
 
 <div class="checkout-summary">
 
@@ -514,15 +220,11 @@ Length:
 
 </div>
 
-<div class="price-line">
-
 <div
 class="main-price"
 id="checkout-total"
 >
 £0
-</div>
-
 </div>
 
 </div>
@@ -570,6 +272,7 @@ International — £38.99
 </div>
 
 <div class="summary-row">
+
 <span>
 Subtotal
 </span>
@@ -577,9 +280,11 @@ Subtotal
 <span id="checkout-subtotal">
 £0
 </span>
+
 </div>
 
 <div class="summary-row">
+
 <span>
 Shipping
 </span>
@@ -587,6 +292,7 @@ Shipping
 <span id="shipping-price">
 £5.99
 </span>
+
 </div>
 
 <div class="total">
