@@ -11,7 +11,7 @@ content="width=device-width, initial-scale=1.0"
 />
 
 <title>
-Frontals | Caviar Curls
+Product | Caviar Curls
 </title>
 
 <link
@@ -33,7 +33,7 @@ rel="stylesheet"
 <link
 rel="stylesheet"
 href="style.css"
-/>
+>
 
 </head>
 
@@ -95,115 +95,107 @@ Cart
 
 </div>
 
-<!-- PAGE TITLE -->
+<!-- PRODUCT PAGE -->
 
-<section class="shop-top">
+<section class="product-page">
 
-<p class="shop-mini">
-Luxury HD Lace
+<!-- PRODUCT IMAGE -->
+
+<div>
+
+<img
+id="product-image"
+class="main-product-image"
+src=""
+alt=""
+>
+
+<div
+class="product-gallery"
+id="product-gallery"
+aria-label="Product image gallery"
+></div>
+
+</div>
+
+<!-- PRODUCT DETAILS -->
+
+<div class="product-details">
+
+<p
+class="product-mini"
+id="product-type"
+>
+Luxury Hair
 </p>
 
-<h1>
-Frontals
+<h1 id="product-title">
+Product
 </h1>
 
-</section>
+<div class="product-stars">
+★★★★★ <span>(412 Reviews)</span>
+</div>
 
-<!-- PRODUCTS -->
+<div class="product-price-wrap">
 
-<section class="shop-grid-wrap">
-
-<div class="wow-grid">
-
-<!-- 13x6 HD -->
-
-<a
-href="product.html?product=hd13x6frontal"
-class="wow-card"
+<span
+class="main-price"
+id="product-price"
 >
-
-<div class="wow-image-wrap">
-
-<img
-src="images/wig1.jpg"
-alt="13x6 HD Frontal"
->
-
-<div class="sale-badge">
-HD
-</div>
-
-</div>
-
-<div class="wow-content">
-
-<h3>
-13x6 HD Frontal
-</h3>
-
-<div class="stars">
-★★★★★ <span>(212)</span>
-</div>
-
-<div class="price-row">
-
-<span class="price">
-From £55
+£0
 </span>
 
 </div>
 
-</div>
+<p
+class="product-description"
+id="product-description"
+>
+Luxury premium hair extensions.
+</p>
 
-</a>
+<!-- TYPE SELECTOR -->
 
-<!-- 13x4 HD -->
-
-<a
-href="product.html?product=hd13x4frontal"
-class="wow-card"
+<div
+class="selector-group"
+id="lace-group"
 >
 
-<div class="wow-image-wrap">
+<label id="type-label">
+Select Type
+</label>
 
-<img
-src="images/wig1.jpg"
-alt="13x4 HD Frontal"
->
-
-<div class="sale-badge">
-HD
-</div>
+<select id="lace-select">
+</select>
 
 </div>
 
-<div class="wow-content">
+<!-- LENGTH SELECTOR -->
 
-<h3>
-13x4 HD Frontal
-</h3>
+<div class="selector-group">
 
-<div class="stars">
-★★★★★ <span>(188)</span>
-</div>
+<label>
+Select Length
+</label>
 
-<div class="price-row">
-
-<span class="price">
-From £50
-</span>
+<select id="length-select">
+</select>
 
 </div>
 
-</div>
+<!-- BUTTON -->
 
-</a>
+<button class="luxury-cart-btn">
+ADD TO CART
+</button>
 
 </div>
 
 </section>
 
 <script src="script.js"></script>
+<script src="products.js"></script>
 
 </body>
 
