@@ -1569,3 +1569,31 @@ margin-top:24px;
 .checkout-btn:hover{
 opacity:.9;
 }
+
+/* PRODUCT IMAGE FIX */
+.card__media,
+.media {
+  background: #f7f1e8; /* cream background */
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SHOW FULL IMAGE */
+.card__media img,
+.media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center;
+  padding: 14px;
+}
+
+/* KEEP PRODUCT CARDS EVEN */
+.card,
+.product-card {
+  height: 100%;
+}
