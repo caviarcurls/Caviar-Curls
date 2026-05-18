@@ -16,7 +16,7 @@ if (!stripeSecretKey) {
 }
 
 const stripe = stripeSecretKey ? Stripe(stripeSecretKey) : null;
-const productsFile = path.join(__dirname, "updated-caviar-files", "products.js");
+const productsFile = path.join(__dirname, "products.js");
 
 function loadProducts() {
   const source = fs.readFileSync(productsFile, "utf8");
@@ -27,7 +27,7 @@ function loadProducts() {
 const products = loadProducts();
 
 app.use(express.json({ limit: "1mb" }));
-app.use(express.static(path.join(__dirname, "updated-caviar-files")));
+app.use(express.static(__dirname));
 
 function cleanMoney(value) {
   const amount = Number(value);
