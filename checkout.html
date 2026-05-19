@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+/>
+
+<title>
+Checkout | Caviar Curls
+</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+rel="stylesheet"
+>
+
+<link
+rel="stylesheet"
+href="style.css?v=20260519-cream-cart-button"
+/>
+
+</head>
+
+<body>
+
+<header class="shop-header">
+
+<div class="shop-header-inner">
+
+<a href="index.html" class="brand">
+
+<span class="brand-main">
+Caviar Curls
+</span>
+
+<span class="brand-sub">
+PREMIUM LUXURY HAIR
+</span>
+
+</a>
+
+<div class="shop-icons">
+
+<a href="cart.html">
+👜
+</a>
+
+</div>
+
+</div>
+
+<nav class="mobile-menu">
+
+<a href="index.html">
+HOME
+</a>
+
+<a href="wigs.html">
+WIGS
+</a>
+
+<a href="bundles.html">
+BUNDLES
+</a>
+
+<a href="frontals.html">
+FRONTALS
+</a>
+
+<a href="cart.html">
+CART
+</a>
+
+</nav>
+
+</header>
+
+<section class="checkout-page">
+
+<div class="checkout-layout">
+
+<!-- FORM -->
+
+<div class="checkout-form">
+
+<h2>
+Shipping Information
+</h2>
+
+<div class="form-group">
+
+<label>
+Full Name
+</label>
+
+<input
+type="text"
+placeholder="Enter your full name"
+/>
+
+</div>
+
+<div class="form-group">
+
+<label>
+Email Address
+</label>
+
+<input
+type="email"
+placeholder="Enter your email"
+/>
+
+</div>
+
+<div class="form-group">
+
+<label>
+Phone Number
+</label>
+
+<input
+type="tel"
+placeholder="Enter your phone number"
+/>
+
+</div>
+
+<div class="form-group">
+
+<label>
+Address
+</label>
+
+<input
+type="text"
+placeholder="Enter your address"
+/>
+
+</div>
+
+<div class="form-group">
+
+<label>
+City
+</label>
+
+<input
+type="text"
+placeholder="Enter your city"
+/>
+
+</div>
+
+<div class="form-group">
+
+<label>
+Postcode
+</label>
+
+<input
+type="text"
+placeholder="Enter your postcode"
+/>
+
+</div>
+
+<div class="security-box">
+
+🛡️ Secure encrypted checkout
+
+</div>
+
+</div>
+
+<!-- SUMMARY -->
+
+<div class="checkout-summary">
+
+<h3>
+Order Summary
+</h3>
+
+<div class="checkout-items" id="checkout-items">
+
+<div class="product-card">
+
+<img
+id="checkout-image"
+src=""
+alt=""
+onerror="this.closest('.product-card').classList.add('no-image'); this.remove()"
+>
+
+<div class="product-info">
+
+<div
+class="product-title"
+id="checkout-product"
+>
+</div>
+
+<div class="product-meta">
+
+<div>
+Type:
+<span id="checkout-type"></span>
+</div>
+
+<div>
+Length:
+<span id="checkout-length"></span>
+</div>
+
+</div>
+
+<div
+class="main-price"
+id="checkout-total"
+>
+£0
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- SHIPPING -->
+
+<div class="shipping-select-row">
+
+<div class="shipping-title">
+Shipping Method
+</div>
+
+<div class="shipping-countries">
+
+International shipping available to:
+
+USA, Canada, France, Germany,
+Netherlands, Belgium, Ireland,
+Spain, Italy, Sweden, Switzerland,
+Norway, Denmark, Australia,
+New Zealand, UAE, Saudi Arabia,
+Qatar, Kuwait, Nigeria,
+South Africa
+
+</div>
+
+<select id="shipping-select">
+
+<option value="5.99">
+UK Standard — £5.99
+</option>
+
+<option value="11.99">
+UK Express — £11.99
+</option>
+
+<option value="38.99">
+International — £38.99
+</option>
+
+</select>
+
+</div>
+
+<div class="summary-row">
+
+<span>
+Subtotal
+</span>
+
+<span id="checkout-subtotal">
+£0
+</span>
+
+</div>
+
+<div class="summary-row">
+
+<span>
+Shipping
+</span>
+
+<span id="shipping-price">
+£5.99
+</span>
+
+</div>
+
+<div class="total">
+
+<div>
+
+<h2>
+Total
+</h2>
+
+<p>
+Taxes calculated at checkout
+</p>
+
+</div>
+
+<h2 id="checkout-total-large">
+£0
+</h2>
+
+</div>
+
+<button class="checkout-btn">
+CHECK OUT
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js?v=20260519-customer-ratings"></script>
+
+<script>
+
+const storedCheckout =
+JSON.parse(localStorage.getItem("checkoutProduct") || "null");
+
+const storedCart =
+JSON.parse(localStorage.getItem("caviarCart") || "[]");
+
+const checkoutItems =
+Array.isArray(storedCart) && storedCart.length
+? storedCart
+: (storedCheckout ? (storedCheckout.items || [storedCheckout]) : []);
+
+const shippingSelect =
+document.getElementById(
+"shipping-select"
+);
+
+function updateCheckout(){
+
+if(checkoutItems.length){
+
+const subtotal =
+checkoutItems.reduce((sum,item)=>{
+return sum + (Number(item.price) || 0) * (Number(item.quantity) || 1);
+},0);
+
+const shipping =
+Number(
+shippingSelect.value
+);
+
+const total =
+subtotal + shipping;
+
+const checkoutItemsWrap =
+document.getElementById("checkout-items");
+
+if(checkoutItemsWrap){
+checkoutItemsWrap.innerHTML =
+checkoutItems.map((item)=>{
+const quantity = Number(item.quantity) || 1;
+const price = Number(item.price) || 0;
+const title = item.title || item.name || "Caviar Curls Item";
+const type = item.type || "Luxury Hair";
+const length = String(item.length || "").replace(/"/g,"");
+const image = item.image || "";
+return `
+<div class="product-card">
+${image ? `<img src="${image}" alt="${title}" onerror="this.closest('.product-card').classList.add('no-image'); this.remove()">` : ""}
+<div class="product-info">
+<div class="product-title">${title}</div>
+<div class="product-meta">
+<div>Type: <span>${type}</span></div>
+${length ? `<div>Length: <span>${length}"</span></div>` : ""}
+<div>Qty: <span>${quantity}</span></div>
+</div>
+<div class="main-price">£${(price * quantity).toFixed(2)}</div>
+</div>
+</div>
+`;
+}).join("");
+}
+
+document.getElementById(
+"checkout-product"
+)?.remove();
+
+document.getElementById(
+"checkout-type"
+)?.remove();
+
+document.getElementById(
+"checkout-length"
+)?.remove();
+
+document.getElementById(
+"checkout-total"
+)?.remove();
+
+document.getElementById(
+"checkout-subtotal"
+).innerText =
+"£" + subtotal.toFixed(2);
+
+document.getElementById(
+"shipping-price"
+).innerText =
+"£" + shipping.toFixed(2);
+
+document.getElementById(
+"checkout-total-large"
+).innerText =
+"£" + total.toFixed(2);
+
+document.getElementById(
+"checkout-image"
+)?.remove();
+
+}
+
+}
+
+shippingSelect.addEventListener(
+"change",
+updateCheckout
+);
+
+updateCheckout();
+
+document.querySelector(
+".checkout-btn"
+).addEventListener("click", async ()=>{
+
+if(!checkoutItems.length){
+alert("Your cart is empty.");
+return;
+}
+
+const selectedShipping =
+shippingSelect.options[shippingSelect.selectedIndex];
+
+try{
+const response =
+await fetch("/create-checkout-session",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+items:checkoutItems,
+shipping:{
+name:selectedShipping ? selectedShipping.textContent.trim() : "Shipping",
+price:Number(shippingSelect.value)
+}
+})
+});
+
+const data =
+await response.json();
+
+if(!response.ok || !data.url){
+throw new Error(data.error || "Unable to start checkout.");
+}
+
+window.location.href =
+data.url;
+}catch(error){
+alert("Checkout is not ready yet. Please make sure the Stripe server is connected.");
+console.error(error);
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
